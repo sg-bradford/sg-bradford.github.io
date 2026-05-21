@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sg-bradford.github.io/posts/welcome/index.html</loc>
-    <lastmod>2026-05-21T21:03:29.963Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sg-bradford.github.io/posts/post-with-code/index.html</loc>
-    <lastmod>2026-05-21T21:03:29.961Z</lastmod>
+    <loc>https://sg-bradford.github.io/posts/walkthrough.html</loc>
+    <lastmod>2026-05-21T21:37:14.684Z</lastmod>
   </url>
   <url>
     <loc>https://sg-bradford.github.io/about.html</loc>
@@ -15,9 +11,5 @@
   <url>
     <loc>https://sg-bradford.github.io/index.html</loc>
     <lastmod>2026-05-21T21:42:05.006Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sg-bradford.github.io/posts/walkthrough.html</loc>
-    <lastmod>2026-05-21T21:37:14.684Z</lastmod>
   </url>
 </urlset>
