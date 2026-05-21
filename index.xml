@@ -5,10 +5,10 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>cd bradfordsnotes</title>
+<title>Bradford&#39;s Notes</title>
 <link>https://sg-bradford.github.io/</link>
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
-<description>A blog built with Quarto</description>
+<description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Thu, 21 May 2026 04:00:00 GMT</lastBuildDate>
 <item>
@@ -53,6 +53,36 @@
   <category>news</category>
   <guid>https://sg-bradford.github.io/posts/welcome/</guid>
   <pubDate>Mon, 18 May 2026 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Hello, Quarto</title>
+  <link>https://sg-bradford.github.io/posts/walkthrough.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="markdown" class="level2">
+<h2 class="anchored" data-anchor-id="markdown">Markdown</h2>
+<p>Markdown is an easy to read and write text format:</p>
+<ul>
+<li>It’s <em>plain text</em> so works well with version control</li>
+<li>It can be <strong>rendered</strong> into HTML, PDF, and more</li>
+<li>Learn more at: <a href="https://quarto.org/docs/authoring/" class="uri">https://quarto.org/docs/authoring/</a></li>
+</ul>
+</section>
+<section id="equation" class="level2">
+<h2 class="anchored" data-anchor-id="equation">Equation</h2>
+<p>Use LaTeX to write equations:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cchi'%20=%20%5Csum_%7Bi=1%7D%5En%20k_i%20s_i%5E2%0A"></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://sg-bradford.github.io/posts/walkthrough.html</guid>
+  <pubDate>Thu, 21 May 2026 21:39:30 GMT</pubDate>
 </item>
 </channel>
 </rss>
