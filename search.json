@@ -4,14 +4,14 @@
     "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html",
     "title": "Non-Local Formulation of Water Waves",
     "section": "",
-    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain [ D={-&lt;x_j&lt;,j=1,2,-h&lt;y&lt;(x_1, x_2, t),t&gt;0} ]"
+    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain \\[\nD=\\{-\\infty&lt;x_j&lt;\\infty,\\quad j=1,2,\\quad -h&lt;y&lt;\\eta(x_1, x_2, t),\\quad t&gt;0\\}\n\\]"
   },
   {
     "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
     "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
     "title": "Non-Local Formulation of Water Waves",
     "section": "",
-    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain [ D={-&lt;x_j&lt;,j=1,2,-h&lt;y&lt;(x_1, x_2, t),t&gt;0} ]"
+    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain \\[\nD=\\{-\\infty&lt;x_j&lt;\\infty,\\quad j=1,2,\\quad -h&lt;y&lt;\\eta(x_1, x_2, t),\\quad t&gt;0\\}\n\\]"
   },
   {
     "objectID": "about.html",
@@ -25,6 +25,6 @@
     "href": "index.html",
     "title": "Notes on Applied Mathematics",
     "section": "",
-    "text": "Non-Local Formulation of Water Waves\n\n\nNotes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in ``On a new non-local formulation of water waves\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Non-Local Formulation of Water Waves\n\n\nNotes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in “On a new non-local formulation of water waves”\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

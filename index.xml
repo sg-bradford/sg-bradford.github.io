@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 22 May 2026 14:53:08 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 May 2026 15:01:52 GMT</lastBuildDate>
 <item>
   <title>Non-Local Formulation of Water Waves</title>
   <link>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</link>
@@ -23,14 +23,14 @@
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">(1) Introduction</h2>
 <p><strong>(1.1) A new non-local formulation of water waves in three dimensions</strong></p>
-<p>We start by defining the domain [ D={-&lt;x_j&lt;,j=1,2,-h&lt;y&lt;(x_1, x_2, t),t&gt;0} ]</p>
+<p>We start by defining the domain <img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx_j%3C%5Cinfty,%5Cquad%20j=1,2,%5Cquad%20-h%3Cy%3C%5Ceta(x_1,%20x_2,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
 
 
 </section>
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Fri, 22 May 2026 14:53:08 GMT</pubDate>
+  <pubDate>Fri, 22 May 2026 15:01:52 GMT</pubDate>
 </item>
 </channel>
 </rss>
