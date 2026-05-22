@@ -10,9 +10,9 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 22 May 2026 15:01:52 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 May 2026 17:47:30 GMT</lastBuildDate>
 <item>
-  <title>Non-Local Formulation of Water Waves</title>
+  <title>[UNDER CONSTRUCTION] Non-Local Formulation of Water Waves</title>
   <link>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</link>
   <description><![CDATA[ 
 
@@ -22,15 +22,26 @@
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">(1) Introduction</h2>
+<!-- more -->
 <p><strong>(1.1) A new non-local formulation of water waves in three dimensions</strong></p>
-<p>We start by defining the domain <img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx_j%3C%5Cinfty,%5Cquad%20j=1,2,%5Cquad%20-h%3Cy%3C%5Ceta(x_1,%20x_2,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
+<p>We start by defining the domain</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx_j%3C%5Cinfty,%5Cquad%20j=1,2,%5Cquad%20-h%3Cy%3C%5Ceta(x_1,%20x_2,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
+<p>The classical gravity water wave problem satisfies</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%5Cphi=0%5Cquad%5Ctext%7Bin%20%7DD,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=0%5Cquad%5Ctext%7Bon%20%7Dy=-h,%0A"> <span id="eq-gravity_wave_problem_3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Cphi_%7Bx_1%7D%5Ceta_%7Bx_1%7D+%5Cphi_%7Bx_2%7D%5Ceta_%7Bx_2%7D=%5Cphi_y%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta,%0A%5Ctag%7B1%7D"></span> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_t+%5Cfrac%7B1%7D%7B2%7D%7C%5Cnabla%5Cphi%7C%5E2+g%5Ceta=%5Cfrac%7B%5Csigma%7D%7B%5Crho%7D%5Cnabla%5Ccdot%5Cleft(%5Cfrac%7B%5Cnabla%5Ceta%7D%7B%5Csqrt%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D%7D%5Cright)%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta.%0A"></p>
+<p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <img src="https://latex.codecogs.com/png.latex?%5Ceta(x_1,%20x_2,%20t)"> and <img src="https://latex.codecogs.com/png.latex?q(x_1,%20x_2,%20t):=%5Cphi(x_1,%20x_2,%20%5Ceta(x_1,%20x_2,%20t),%20t)">.</p>
+<p>Since Equation&nbsp;1 is satisfied on the free surface, and</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_1%7D+%5Cphi_y%5Ceta_%7Bx_1%7D=q_%7Bx_1%7D,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_2%7D+%5Cphi_y%5Ceta_%7Bx_2%7D=q_%7Bx_2%7D,%0A"></p>
+<p>we can create the linear system</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A=%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20-%5Ceta_%7Bx_1%7D%5E2%20&amp;%20-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20%5C%5C%0A%20%20%20%20-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20&amp;%20-%5Ceta_%7Bx_2%7D%5E2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A+%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%20%5C%5C%0A%20%20%20%20q_%7Bx_2%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%0A%5Cend%7Bbmatrix%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%201+%5Ceta_%7Bx_1%7D%5E2%20&amp;%20%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20%5C%5C%0A%20%20%20%20%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20&amp;%201+%5Ceta_%7Bx_2%7D%5E2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A=%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%20%5C%5C%0A%20%20%20%20q_%7Bx_2%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%0A%5Cend%7Bbmatrix%7D.%0A"></p>
+<p>The solution of which is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_1%7D=%5Cfrac%7B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%7D%7B1+%5Ceta_%7Bx_1%7D%5E2+%5Ceta_%7Bx_2%7D%5E2%7D%0A"></p>
 
 
 </section>
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Fri, 22 May 2026 15:01:52 GMT</pubDate>
+  <pubDate>Fri, 22 May 2026 17:47:30 GMT</pubDate>
 </item>
 </channel>
 </rss>

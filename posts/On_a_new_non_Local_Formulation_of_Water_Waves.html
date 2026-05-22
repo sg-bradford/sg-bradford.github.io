@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Non-Local Formulation of Water Waves – Bradford’s Notes</title>
+<title>[UNDER CONSTRUCTION] Non-Local Formulation of Water Waves – Bradford’s Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -159,8 +159,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Non-Local Formulation of Water Waves</h1>
-            <p class="subtitle lead">Notes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in <em>“On a new non-local formulation of water waves”</em></p>
+      <h1 class="title">[UNDER CONSTRUCTION] Non-Local Formulation of Water Waves</h1>
+            <p class="subtitle lead">Notes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in <em>“On a new non-local formulation of water waves”.</em></p>
                       </div>
   </div>
     
@@ -186,9 +186,68 @@ window.Quarto = {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">(1) Introduction</h2>
+<!-- more -->
 <p><strong>(1.1) A new non-local formulation of water waves in three dimensions</strong></p>
-<p>We start by defining the domain <span class="math display">\[
+<p>We start by defining the domain</p>
+<p><span class="math display">\[
 D=\{-\infty&lt;x_j&lt;\infty,\quad j=1,2,\quad -h&lt;y&lt;\eta(x_1, x_2, t),\quad t&gt;0\}
+\]</span></p>
+<p>The classical gravity water wave problem satisfies</p>
+<p><span class="math display">\[
+\Delta\phi=0\quad\text{in }D,
+\]</span> <span class="math display">\[
+\phi_y=0\quad\text{on }y=-h,
+\]</span> <span id="eq-gravity_wave_problem_3"><span class="math display">\[
+\eta_t+\phi_{x_1}\eta_{x_1}+\phi_{x_2}\eta_{x_2}=\phi_y\quad\text{on }y=\eta,
+\tag{1}\]</span></span> <span class="math display">\[
+\phi_t+\frac{1}{2}|\nabla\phi|^2+g\eta=\frac{\sigma}{\rho}\nabla\cdot\left(\frac{\nabla\eta}{\sqrt{1+|\nabla\eta|^2}}\right)\quad\text{on }y=\eta.
+\]</span></p>
+<p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <span class="math inline">\(\eta(x_1, x_2, t)\)</span> and <span class="math inline">\(q(x_1, x_2, t):=\phi(x_1, x_2, \eta(x_1, x_2, t), t)\)</span>.</p>
+<p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;1</a> is satisfied on the free surface, and</p>
+<p><span class="math display">\[
+\phi_{x_1}+\phi_y\eta_{x_1}=q_{x_1},
+\]</span> <span class="math display">\[
+\phi_{x_2}+\phi_y\eta_{x_2}=q_{x_2},
+\]</span></p>
+<p>we can create the linear system</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+    \phi_{x_1} \\
+    \phi_{x_2}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    -\eta_{x_1}^2 &amp; -\eta_{x_1}\eta_{x_2} \\
+    -\eta_{x_1}\eta_{x_2} &amp; -\eta_{x_2}^2
+\end{bmatrix}
+\begin{bmatrix}
+    \phi_{x_1} \\
+    \phi_{x_2}
+\end{bmatrix}
++
+\begin{bmatrix}
+    q_{x_1}-\eta_{x_1}\eta_t \\
+    q_{x_2}-\eta_{x_2}\eta_t
+\end{bmatrix}
+\]</span> <span class="math display">\[
+\implies
+\begin{bmatrix}
+    1+\eta_{x_1}^2 &amp; \eta_{x_1}\eta_{x_2} \\
+    \eta_{x_1}\eta_{x_2} &amp; 1+\eta_{x_2}^2
+\end{bmatrix}
+\begin{bmatrix}
+    \phi_{x_1} \\
+    \phi_{x_2}
+\end{bmatrix}
+=
+\begin{bmatrix}
+    q_{x_1}-\eta_{x_1}\eta_t \\
+    q_{x_2}-\eta_{x_2}\eta_t
+\end{bmatrix}.
+\]</span></p>
+<p>The solution of which is</p>
+<p><span class="math display">\[
+\phi_{x_1}=\frac{(1+\eta_{x_2}^2)q_{x_2}-\eta_{x_1}\eta_{x_2}q_{x_2}-\eta_{x_1}\eta_t}{1+\eta_{x_1}^2+\eta_{x_2}^2}
 \]</span></p>
 
 
