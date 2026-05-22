@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 22 May 2026 20:19:43 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 May 2026 20:21:04 GMT</lastBuildDate>
 <item>
   <title>[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves</title>
   <link>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</link>
@@ -38,14 +38,14 @@
 <p>At this point, the authors suggest that</p>
 <p><span id="eq-sqaure_grad_phi"><img src="https://latex.codecogs.com/png.latex?%0A%7C%5Cnabla%5Cphi%7C%5E2=%5Cfrac%7B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D%5E2+(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D%5E2+%5Ceta_t%5E2-2%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7Dq_%7Bx_2%7D%7D%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D.%0A%5Ctag%7B2%7D"></span></p>
 <p>Rather than deriving Equation&nbsp;2 from scratch, we can more easily verify its validity by showing that <img src="https://latex.codecogs.com/png.latex?%0A%5B1+%7C%5Cnabla%5Ceta%7C%5E2%5D%5Ccdot%5B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D%5E2+(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D%5E2+%5Ceta_t%5E2-2%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7Dq_%7Bx_2%7D%5D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%5D%5E2+%5B(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%5D%5E2+%5B%5Ceta_t+%5Ceta_%7Bx_1%7Dq_%7Bx_1%7D+%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D%5D%5E2,%0A"></p>
-<p>since <img src="https://latex.codecogs.com/png.latex?(1+%7C%5Cnabla%5Ceta%7C%5E2)"> to be a factor in the numerator of <img src="https://latex.codecogs.com/png.latex?%5Cphi_%7Bx_1%7D%5E2+%5Cphi_%7Bx_2%7D%5E2+%5Cphi_y%5E2"> for Equation&nbsp;2 to hold.</p>
+<p>since <img src="https://latex.codecogs.com/png.latex?(1+%7C%5Cnabla%5Ceta%7C%5E2)"> must be a factor in the numerator of <img src="https://latex.codecogs.com/png.latex?%5Cphi_%7Bx_1%7D%5E2+%5Cphi_%7Bx_2%7D%5E2+%5Cphi_y%5E2"> for Equation&nbsp;2 to hold.</p>
 
 
 </section>
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Fri, 22 May 2026 20:19:43 GMT</pubDate>
+  <pubDate>Fri, 22 May 2026 20:21:04 GMT</pubDate>
 </item>
 </channel>
 </rss>
