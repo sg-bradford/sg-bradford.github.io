@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>[UNDER CONSTRUCTION] Non-Local Formulation of Water Waves – Bradford’s Notes</title>
+<title>[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves – Bradford’s Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -159,7 +159,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">[UNDER CONSTRUCTION] Non-Local Formulation of Water Waves</h1>
+      <h1 class="title">[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves</h1>
             <p class="subtitle lead">Notes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in <em>“On a new non-local formulation of water waves”.</em></p>
                       </div>
   </div>
@@ -247,8 +247,22 @@ D=\{-\infty&lt;x_j&lt;\infty,\quad j=1,2,\quad -h&lt;y&lt;\eta(x_1, x_2, t),\qua
 \]</span></p>
 <p>The solution of which is</p>
 <p><span class="math display">\[
-\phi_{x_1}=\frac{(1+\eta_{x_2}^2)q_{x_2}-\eta_{x_1}\eta_{x_2}q_{x_2}-\eta_{x_1}\eta_t}{1+\eta_{x_1}^2+\eta_{x_2}^2}
+\phi_{x_1}=\frac{(1+\eta_{x_2}^2)q_{x_1}-\eta_{x_1}\eta_{x_2}q_{x_2}-\eta_{x_1}\eta_t}{1+|\nabla\eta|^2},
+\]</span> <span class="math display">\[
+\phi_{x_2}=\frac{(1+\eta_{x_1}^2)q_{x_2}-\eta_{x_1}\eta_{x_2}q_{x_1}-\eta_{x_2}\eta_t}{1+|\nabla\eta|^2},
+\]</span> <span class="math display">\[
+\phi_y=\frac{\eta_t+\eta_{x_1}q_{x_1}+\eta_{x_2}q_{x_2}}{1+|\nabla\eta|^2}.
 \]</span></p>
+<p>At this point, the authors suggest that</p>
+<p><span id="eq-sqaure_grad_phi"><span class="math display">\[
+|\nabla\phi|^2=\frac{(1+\eta_{x_2}^2)q_{x_1}^2+(1+\eta_{x_1}^2)q_{x_2}^2+\eta_t^2-2\eta_{x_1}\eta_{x_2}q_{x_1}q_{x_2}}{1+|\nabla\eta|^2}.
+\tag{2}\]</span></span></p>
+<p>Rather than deriving <a href="#eq-sqaure_grad_phi" class="quarto-xref">Equation&nbsp;2</a> from scratch, we can more easily verify its validity by showing that <span class="math display">\[
+[1+|\nabla\eta|^2]\cdot[(1+\eta_{x_2}^2)q_{x_1}^2+(1+\eta_{x_1}^2)q_{x_2}^2+\eta_t^2-2\eta_{x_1}\eta_{x_2}q_{x_1}q_{x_2}]
+\]</span> <span class="math display">\[
+=[(1+\eta_{x_2}^2)q_{x_1}-\eta_{x_1}\eta_{x_2}q_{x_2}-\eta_{x_1}\eta_t]^2+[(1+\eta_{x_1}^2)q_{x_2}-\eta_{x_1}\eta_{x_2}q_{x_1}-\eta_{x_2}\eta_t]^2+[\eta_t+\eta_{x_1}q_{x_1}+\eta_{x_2}q_{x_2}]^2,
+\]</span></p>
+<p>since <span class="math inline">\((1+|\nabla\eta|^2)\)</span> to be a factor in the numerator of <span class="math inline">\(\phi_{x_1}^2+\phi_{x_2}^2+\phi_y^2\)</span> for <a href="#eq-sqaure_grad_phi" class="quarto-xref">Equation&nbsp;2</a> to hold.</p>
 
 
 </section>
