@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "posts/walkthrough.html",
-    "href": "posts/walkthrough.html",
-    "title": "Test Article",
+    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html",
+    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html",
+    "title": "Non-Local Formulation of Water Waves",
     "section": "",
-    "text": "Markdown is an easy to read and write text format:\n\nIt’s plain text so works well with version control\nIt can be rendered into HTML, PDF, and more\nLearn more at: https://quarto.org/docs/authoring/"
+    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain [ D={-&lt;x_j&lt;,j=1,2,-h&lt;y&lt;(x_1, x_2, t),t&gt;0} ]"
   },
   {
-    "objectID": "posts/walkthrough.html#markdown",
-    "href": "posts/walkthrough.html#markdown",
-    "title": "Test Article",
+    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
+    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
+    "title": "Non-Local Formulation of Water Waves",
     "section": "",
-    "text": "Markdown is an easy to read and write text format:\n\nIt’s plain text so works well with version control\nIt can be rendered into HTML, PDF, and more\nLearn more at: https://quarto.org/docs/authoring/"
-  },
-  {
-    "objectID": "posts/walkthrough.html#equation",
-    "href": "posts/walkthrough.html#equation",
-    "title": "Test Article",
-    "section": "Equation",
-    "text": "Equation\nUse LaTeX to write equations:\n\\[\n\\chi' = \\sum_{i=1}^n k_i s_i^2\n\\]"
+    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain [ D={-&lt;x_j&lt;,j=1,2,-h&lt;y&lt;(x_1, x_2, t),t&gt;0} ]"
   },
   {
     "objectID": "about.html",
@@ -32,6 +25,6 @@
     "href": "index.html",
     "title": "Notes on Applied Mathematics",
     "section": "",
-    "text": "Test Article\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Non-Local Formulation of Water Waves\n\n\nNotes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in ``On a new non-local formulation of water waves\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
