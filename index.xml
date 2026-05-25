@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 25 May 2026 20:23:40 GMT</lastBuildDate>
+<lastBuildDate>Mon, 25 May 2026 21:13:54 GMT</lastBuildDate>
 <item>
   <title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</title>
   <link>https://sg-bradford.github.io/posts/Bifurcations.html</link>
@@ -48,7 +48,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/Bifurcations.html</guid>
-  <pubDate>Mon, 25 May 2026 20:23:40 GMT</pubDate>
+  <pubDate>Mon, 25 May 2026 21:13:54 GMT</pubDate>
 </item>
 <item>
   <title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</title>
@@ -65,18 +65,18 @@
 <p>We start by defining the domain</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx%3C%5Cinfty,%5Cquad%20-h%3Cy%3C%5Ceta(x,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
 <p>The classical gravity water wave problem satisfies</p>
-<p><span id="eq-Laplace"><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%5Cphi=0%5Cquad%5Ctext%7Bin%20%7DD,%0A%5Ctag%7B1%7D"></span> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=0%5Cquad%5Ctext%7Bon%20%7Dy=-h,%0A"> <span id="eq-gravity_wave_problem_3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Cphi_x%5Ceta_x=%5Cphi_y%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta,%0A%5Ctag%7B2%7D"></span> <span id="eq-gravity_wave_problem_4"><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_t+%5Cfrac%7B1%7D%7B2%7D%7C%5Cnabla%5Cphi%7C%5E2+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta.%0A%5Ctag%7B3%7D"></span></p>
+<p><span id="eq-Laplace"><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%5Cphi=0%5Cquad%5Ctext%7Bin%20%7DD,%0A%5Ctag%7B1%7D"></span> <span id="eq-bottom"><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=0%5Cquad%5Ctext%7Bon%20%7Dy=-h,%0A%5Ctag%7B2%7D"></span> <span id="eq-gravity_wave_problem_3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Cphi_x%5Ceta_x=%5Cphi_y%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta,%0A%5Ctag%7B3%7D"></span> <span id="eq-gravity_wave_problem_4"><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_t+%5Cfrac%7B1%7D%7B2%7D%7C%5Cnabla%5Cphi%7C%5E2+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta.%0A%5Ctag%7B4%7D"></span></p>
 </section>
 <section id="deriving-the-dynamic-boundary-condition" class="level2">
 <h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
 <p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <img src="https://latex.codecogs.com/png.latex?%5Ceta(x,%20t)"> and <img src="https://latex.codecogs.com/png.latex?q(x,%20t):=%5Cphi(x_1,%20%5Ceta(x,%20t),%20t)">.</p>
-<p>Since Equation&nbsp;2 is satisfied on the free surface, and</p>
+<p>Since Equation&nbsp;3 is satisfied on the free surface, and</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_x+%5Cphi_y%5Ceta_x=q_x,%0A"></p>
 <p>we have</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Bq_x-%5Cphi_y%5Ceta_x%5D%5Ceta_x=%5Cphi_y%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cphi_y=%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D,%5Cquad%5Cphi_x=%5Cfrac%7Bq_x-%5Ceta_x%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D.%0A"></p>
 <p>This implies that</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7C%5Cnabla%5Cphi%7C%5E2=%5Cphi_x%5E2+%5Cphi_y%5E2%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2-2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_x%5E2%5Ceta_t%5E2%5D+%5B%5Ceta_x%5E2%20q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2+%5Ceta_t%5E2%5D+%5Ceta_x%5E2%5Bq_x%5E2+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%0A"></p>
-<p>Substituting <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C%5E2"> and <img src="https://latex.codecogs.com/png.latex?%5Cphi_t=q_t-%5Cphi_y%5Ceta_t"> into Equation&nbsp;3, we have</p>
+<p>Substituting <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C%5E2"> and <img src="https://latex.codecogs.com/png.latex?%5Cphi_t=q_t-%5Cphi_y%5Ceta_t"> into Equation&nbsp;4, we have</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Bq_t-%5Cleft%5B%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D%5Ceta_t%5D+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5B%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B2%5Ceta_x%5Ceta_t%20q_x+2%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7B(1+%5Ceta_x%5E2)q_x%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B%5Ceta_x%5E2q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7Dq_x%5E2-%5Cfrac%7B(%5Ceta_t+%5Ceta_x%20q_x)%5E2%7D%7B1+%5Ceta_x%5E2%7D=0%0A"> This is the dynamic boundary condition - Bernoulli’s equation.</p>
 </section>
 <section id="deriving-the-global-relation" class="level2">
@@ -85,6 +85,17 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y(%5Cpsi_%7Bxx%7D+%5Cpsi_%7Byy%7D)+%5Cpsi_y(%5Cphi_%7Bxx%7D+%5Cphi_%7Byy%7D)=0.%0A"></p>
 <p>Which can be rewritten as</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A(%5Cphi_y%5Cpsi_x+%5Cphi_x%5Cpsi_y)_x+(%5Cphi_y%5Cpsi_y-%5Cphi_x%5Cpsi_x)_y=0.%0A"></p>
+<p>Now let <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)=e%5E%7Bikx+ky%7D">. Since <img src="https://latex.codecogs.com/png.latex?%5Cpsi"> is harmonic, we can write</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5B%5Cpsi(ik%5Cphi_y+k%5Cphi_x)%5D_x+%5B%5Cpsi(k%5Cphi_x-ik%5Cphi_x)%5D_y=0%0A"></p>
+<p>In other words, the vector field <img src="https://latex.codecogs.com/png.latex?%5Cvec%7BF%7D(x,y)=%5Cpsi(ik%5Cphi_y+k%5Cphi_x)%5Chat%7Bi%7D+%5Cpsi(k%5Cphi_x-ik%5Cphi_x)%5Chat%7Bj%7D"> is non-divergent - i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cnabla%5Ccdot%20F=0">. Since <img src="https://latex.codecogs.com/png.latex?F"> is a continuously differentiable vector field,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_D%5B%5Cnabla%5Ccdot%20F%5DdV=%5Cint_%7B%5Cpartial%20D%7D%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%0A"></p>
+<p>by the divergence theorem. Thus,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B%5Cpartial%20D%7D%5Be%5E%7Bikx+ky%7D%5B(ik%5Cphi_y+k%5Cphi_x)%5Chat%7Bi%7D+(k%5Cphi_y-ik%5Cphi_x)%5Chat%7Bj%7D%5D%5Ccdot%5Chat%7Bn%7D%5DdS=0%0A"></p>
+<p>Here, we make the assumption that <img src="https://latex.codecogs.com/png.latex?%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C"> vanish as <img src="https://latex.codecogs.com/png.latex?%7Cx%7C%5Cto%5Cinfty"> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). Thus we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Clim_%7B%7Cx%7C%5Cto%5Cinfty%7D%5Cleft(%5Cint_%7B%5Cpartial%20D%7D%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%5Cright)=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty(%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=-h%7D+%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=%5Ceta%7D)dx=0%0A"></p>
+<p>Since we have Equation&nbsp;2 for <img src="https://latex.codecogs.com/png.latex?y=-h">, the bottom integrand becomes</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ae%5E%7Bikx-kh%7D(ik%5Cphi_x)%0A"></p>
+<p>On the free surface</p>
 <p>[Thanks for reading! This article is still being written…]</p>
 
 
@@ -92,7 +103,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Mon, 25 May 2026 20:23:40 GMT</pubDate>
+  <pubDate>Mon, 25 May 2026 21:13:54 GMT</pubDate>
 </item>
 </channel>
 </rss>

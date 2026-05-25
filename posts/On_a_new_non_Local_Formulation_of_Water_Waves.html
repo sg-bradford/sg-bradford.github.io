@@ -194,18 +194,18 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 <p>The classical gravity water wave problem satisfies</p>
 <p><span id="eq-Laplace"><span class="math display">\[
 \Delta\phi=0\quad\text{in }D,
-\tag{1}\]</span></span> <span class="math display">\[
+\tag{1}\]</span></span> <span id="eq-bottom"><span class="math display">\[
 \phi_y=0\quad\text{on }y=-h,
-\]</span> <span id="eq-gravity_wave_problem_3"><span class="math display">\[
+\tag{2}\]</span></span> <span id="eq-gravity_wave_problem_3"><span class="math display">\[
 \eta_t+\phi_x\eta_x=\phi_y\quad\text{on }y=\eta,
-\tag{2}\]</span></span> <span id="eq-gravity_wave_problem_4"><span class="math display">\[
+\tag{3}\]</span></span> <span id="eq-gravity_wave_problem_4"><span class="math display">\[
 \phi_t+\frac{1}{2}|\nabla\phi|^2+g\eta=\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}\quad\text{on }y=\eta.
-\tag{3}\]</span></span></p>
+\tag{4}\]</span></span></p>
 </section>
 <section id="deriving-the-dynamic-boundary-condition" class="level2">
 <h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
 <p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <span class="math inline">\(\eta(x, t)\)</span> and <span class="math inline">\(q(x, t):=\phi(x_1, \eta(x, t), t)\)</span>.</p>
-<p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;2</a> is satisfied on the free surface, and</p>
+<p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;3</a> is satisfied on the free surface, and</p>
 <p><span class="math display">\[
 \phi_x+\phi_y\eta_x=q_x,
 \]</span></p>
@@ -225,7 +225,7 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 \]</span> <span class="math display">\[
 =\frac{q_x^2+\eta_t^2}{1+\eta_x^2}
 \]</span></p>
-<p>Substituting <span class="math inline">\(|\nabla\phi|^2\)</span> and <span class="math inline">\(\phi_t=q_t-\phi_y\eta_t\)</span> into <a href="#eq-gravity_wave_problem_4" class="quarto-xref">Equation&nbsp;3</a>, we have</p>
+<p>Substituting <span class="math inline">\(|\nabla\phi|^2\)</span> and <span class="math inline">\(\phi_t=q_t-\phi_y\eta_t\)</span> into <a href="#eq-gravity_wave_problem_4" class="quarto-xref">Equation&nbsp;4</a>, we have</p>
 <p><span class="math display">\[
 [q_t-\left[\frac{\eta_x q_x+\eta_t}{1+\eta_x^2}\right]\eta_t]+\frac{1}{2}\left[\frac{q_x^2+\eta_t^2}{1+\eta_x^2}\right]+g\eta=\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}
 \]</span> <span class="math display">\[
@@ -246,6 +246,27 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 <p><span class="math display">\[
 (\phi_y\psi_x+\phi_x\psi_y)_x+(\phi_y\psi_y-\phi_x\psi_x)_y=0.
 \]</span></p>
+<p>Now let <span class="math inline">\(\psi(x,y)=e^{ikx+ky}\)</span>. Since <span class="math inline">\(\psi\)</span> is harmonic, we can write</p>
+<p><span class="math display">\[
+[\psi(ik\phi_y+k\phi_x)]_x+[\psi(k\phi_x-ik\phi_x)]_y=0
+\]</span></p>
+<p>In other words, the vector field <span class="math inline">\(\vec{F}(x,y)=\psi(ik\phi_y+k\phi_x)\hat{i}+\psi(k\phi_x-ik\phi_x)\hat{j}\)</span> is non-divergent - i.e.&nbsp;<span class="math inline">\(\nabla\cdot F=0\)</span>. Since <span class="math inline">\(F\)</span> is a continuously differentiable vector field,</p>
+<p><span class="math display">\[
+\int_D[\nabla\cdot F]dV=\int_{\partial D}[F\cdot\hat{n}]dS
+\]</span></p>
+<p>by the divergence theorem. Thus,</p>
+<p><span class="math display">\[
+\int_{\partial D}[e^{ikx+ky}[(ik\phi_y+k\phi_x)\hat{i}+(k\phi_y-ik\phi_x)\hat{j}]\cdot\hat{n}]dS=0
+\]</span></p>
+<p>Here, we make the assumption that <span class="math inline">\(\eta\)</span> and <span class="math inline">\(|\nabla\phi|\)</span> vanish as <span class="math inline">\(|x|\to\infty\)</span> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). Thus we have</p>
+<p><span class="math display">\[
+\lim_{|x|\to\infty}\left(\int_{\partial D}[F\cdot\hat{n}]dS\right)=\int_{-\infty}^\infty([F\cdot\hat{n}]_{y=-h}+[F\cdot\hat{n}]_{y=\eta})dx=0
+\]</span></p>
+<p>Since we have <a href="#eq-bottom" class="quarto-xref">Equation&nbsp;2</a> for <span class="math inline">\(y=-h\)</span>, the bottom integrand becomes</p>
+<p><span class="math display">\[
+e^{ikx-kh}(ik\phi_x)
+\]</span></p>
+<p>On the free surface</p>
 <p>[Thanks for reading! This article is still being written…]</p>
 
 
