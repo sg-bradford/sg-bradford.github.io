@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation – Bradford’s Notes</title>
+<title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night – Bradford’s Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -159,8 +159,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</h1>
-            <p class="subtitle lead">An expository derivation of a result shown by M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in <em>“On a new non-local formulation of water waves”.</em></p>
+      <h1 class="title">Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</h1>
+            <p class="subtitle lead">May 24, 2026</p>
                       </div>
   </div>
     
@@ -184,69 +184,28 @@ window.Quarto = {
 
 
 
-<section id="the-classical-gravity-water-wave-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-classical-gravity-water-wave-problem">The Classical Gravity Water Wave Problem</h2>
+<section id="background-and-context" class="level2">
+<h2 class="anchored" data-anchor-id="background-and-context">Background and Context</h2>
 <!-- more -->
-<p>We start by defining the domain</p>
-<p><span class="math display">\[
-D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
-\]</span></p>
-<p>The classical gravity water wave problem satisfies</p>
-<p><span id="eq-Laplace"><span class="math display">\[
-\Delta\phi=0\quad\text{in }D,
-\tag{1}\]</span></span> <span class="math display">\[
-\phi_y=0\quad\text{on }y=-h,
-\]</span> <span id="eq-gravity_wave_problem_3"><span class="math display">\[
-\eta_t+\phi_x\eta_x=\phi_y\quad\text{on }y=\eta,
-\tag{2}\]</span></span> <span id="eq-gravity_wave_problem_4"><span class="math display">\[
-\phi_t+\frac{1}{2}|\nabla\phi|^2+g\eta=\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}\quad\text{on }y=\eta.
-\tag{3}\]</span></span></p>
+<p>Engineers don’t like unexpected behaviour in their systems. They <em>really</em> don’t like it when that unexpected behaviour</p>
 </section>
-<section id="deriving-the-dynamic-boundary-condition" class="level2">
-<h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
-<p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <span class="math inline">\(\eta(x, t)\)</span> and <span class="math inline">\(q(x, t):=\phi(x_1, \eta(x, t), t)\)</span>.</p>
-<p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;2</a> is satisfied on the free surface, and</p>
-<p><span class="math display">\[
-\phi_x+\phi_y\eta_x=q_x,
-\]</span></p>
-<p>we have</p>
-<p><span class="math display">\[
-\eta_t+[q_x-\phi_y\eta_x]\eta_x=\phi_y
-\]</span> <span class="math display">\[
-\implies\phi_y=\frac{\eta_x q_x+\eta_t}{1+\eta_x^2},\quad\phi_x=\frac{q_x-\eta_x\eta_t}{1+\eta_x^2}.
-\]</span></p>
-<p>This implies that</p>
-<p><span class="math display">\[
-|\nabla\phi|^2=\phi_x^2+\phi_y^2
-\]</span> <span class="math display">\[
-=\frac{[q_x^2-2\eta_x\eta_t q_x+\eta_x^2\eta_t^2]+[\eta_x^2 q_x^2+2\eta_x\eta_t q_x+\eta_t^2]}{(1+\eta_x^2)^2}
-\]</span> <span class="math display">\[
-=\frac{[q_x^2+\eta_t^2]+\eta_x^2[q_x^2+\eta_t^2]}{(1+\eta_x^2)^2}
-\]</span> <span class="math display">\[
-=\frac{q_x^2+\eta_t^2}{1+\eta_x^2}
-\]</span></p>
-<p>Substituting <span class="math inline">\(|\nabla\phi|^2\)</span> and <span class="math inline">\(\phi_t=q_t-\phi_y\eta_t\)</span> into <a href="#eq-gravity_wave_problem_4" class="quarto-xref">Equation&nbsp;3</a>, we have</p>
-<p><span class="math display">\[
-[q_t-\left[\frac{\eta_x q_x+\eta_t}{1+\eta_x^2}\right]\eta_t]+\frac{1}{2}\left[\frac{q_x^2+\eta_t^2}{1+\eta_x^2}\right]+g\eta=\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}
-\]</span> <span class="math display">\[
-\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}\left(\frac{q_x^2+\eta_t^2}{1+\eta_x^2}-\frac{2\eta_x\eta_t q_x+2\eta_t^2}{1+\eta_x^2}\right)=0
-\]</span> <span class="math display">\[
-\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}\left(\frac{(1+\eta_x^2)q_x^2}{1+\eta_x^2}-\frac{\eta_x^2q_x^2+2\eta_x\eta_t q_x+\eta_t^2}{1+\eta_x^2}\right)=0
-\]</span> <span class="math display">\[
-\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}q_x^2-\frac{(\eta_t+\eta_x q_x)^2}{1+\eta_x^2}=0
-\]</span> This is the dynamic boundary condition - Bernoulli’s equation.</p>
+<section id="limit-cycles" class="level2">
+<h2 class="anchored" data-anchor-id="limit-cycles">Limit Cycles</h2>
+<p><strong>Definition</strong></p>
+<p>A limit cycle is an <em>isolated</em> closed trajectory in phase space.</p>
+<p><strong>Brief Description</strong></p>
+<p>Recall that a closed trajectory in the phase space of a dynamical system represents a periodic solution. So a limit cycle describes a periodic solution that is isolated from all other periodic solutions - i.e.&nbsp;there are no other closed trajectories in a small neighbourhood around a limit cycle.</p>
+<p>Limit cycles only exist in <em>nonlinear</em> systems. If <span class="math inline">\(\pmb{x}(t)\)</span> is a periodic solution to a linear system <span class="math inline">\(\dot{\pmb{x}}=A\pmb{x}\)</span>, then <span class="math inline">\(c\pmb{x}(t)\)</span> is also a solution for any constant <span class="math inline">\(c\in\mathbb{R}\)</span>. So for any linear system, either no closed trajectories exist, or an infinite family of closed trajectories exist.</p>
+<p>A limit cycle is said to be <em>stable</em> if all neighbouring trajectories converge to the limit cycle, and <em>unstable</em> if all neighbouring trajectories diverge from the limit cycle. <em>Half-stable</em> limit cycles exist as well, but are difficult to generalize to phase spaces of dimension <span class="math inline">\(3\)</span> or higher. In the phase plane, a half-stable limit cycle can be understood as a limit cycle that is stable for trajectories on the interior of the limit cycle, and unstable for trajectories on the exterior (or <em>vice versa</em>).</p>
 </section>
-<section id="deriving-the-global-relation" class="level2">
-<h2 class="anchored" data-anchor-id="deriving-the-global-relation">Deriving the Global Relation</h2>
-<p>Suppose that <span class="math inline">\(\phi(x,y)\)</span> and <span class="math inline">\(\psi(x,y)\)</span> are harmonic functions in <span class="math inline">\(D\)</span> - i.e.&nbsp;they satisfy <a href="#eq-Laplace" class="quarto-xref">Equation&nbsp;1</a>. Then we have the identity</p>
-<p><span class="math display">\[
-\phi_y(\psi_{xx}+\psi_{yy})+\psi_y(\phi_{xx}+\phi_{yy})=0.
-\]</span></p>
-<p>Which can be rewritten as</p>
-<p><span class="math display">\[
-(\phi_y\psi_x+\phi_x\psi_y)_x+(\phi_y\psi_y-\phi_x\psi_x)_y=0.
-\]</span></p>
-<p>[Thanks for reading! This article is still being written…]</p>
+<section id="hopf-bifurcations" class="level2">
+<h2 class="anchored" data-anchor-id="hopf-bifurcations">Hopf Bifurcations</h2>
+<p><strong>Definition</strong></p>
+<p>A Hopf bifurcation is a</p>
+</section>
+<section id="some-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="some-mathematics">Some Mathematics</h2>
+<p>…</p>
 
 
 </section>

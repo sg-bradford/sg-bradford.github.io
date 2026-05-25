@@ -10,9 +10,48 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 22 May 2026 20:21:04 GMT</lastBuildDate>
+<lastBuildDate>Mon, 25 May 2026 20:23:40 GMT</lastBuildDate>
 <item>
-  <title>[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves</title>
+  <title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</title>
+  <link>https://sg-bradford.github.io/posts/Bifurcations.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="background-and-context" class="level2">
+<h2 class="anchored" data-anchor-id="background-and-context">Background and Context</h2>
+<!-- more -->
+<p>Engineers don’t like unexpected behaviour in their systems. They <em>really</em> don’t like it when that unexpected behaviour</p>
+</section>
+<section id="limit-cycles" class="level2">
+<h2 class="anchored" data-anchor-id="limit-cycles">Limit Cycles</h2>
+<p><strong>Definition</strong></p>
+<p>A limit cycle is an <em>isolated</em> closed trajectory in phase space.</p>
+<p><strong>Brief Description</strong></p>
+<p>Recall that a closed trajectory in the phase space of a dynamical system represents a periodic solution. So a limit cycle describes a periodic solution that is isolated from all other periodic solutions - i.e.&nbsp;there are no other closed trajectories in a small neighbourhood around a limit cycle.</p>
+<p>Limit cycles only exist in <em>nonlinear</em> systems. If <img src="https://latex.codecogs.com/png.latex?%5Cpmb%7Bx%7D(t)"> is a periodic solution to a linear system <img src="https://latex.codecogs.com/png.latex?%5Cdot%7B%5Cpmb%7Bx%7D%7D=A%5Cpmb%7Bx%7D">, then <img src="https://latex.codecogs.com/png.latex?c%5Cpmb%7Bx%7D(t)"> is also a solution for any constant <img src="https://latex.codecogs.com/png.latex?c%5Cin%5Cmathbb%7BR%7D">. So for any linear system, either no closed trajectories exist, or an infinite family of closed trajectories exist.</p>
+<p>A limit cycle is said to be <em>stable</em> if all neighbouring trajectories converge to the limit cycle, and <em>unstable</em> if all neighbouring trajectories diverge from the limit cycle. <em>Half-stable</em> limit cycles exist as well, but are difficult to generalize to phase spaces of dimension <img src="https://latex.codecogs.com/png.latex?3"> or higher. In the phase plane, a half-stable limit cycle can be understood as a limit cycle that is stable for trajectories on the interior of the limit cycle, and unstable for trajectories on the exterior (or <em>vice versa</em>).</p>
+</section>
+<section id="hopf-bifurcations" class="level2">
+<h2 class="anchored" data-anchor-id="hopf-bifurcations">Hopf Bifurcations</h2>
+<p><strong>Definition</strong></p>
+<p>A Hopf bifurcation is a</p>
+</section>
+<section id="some-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="some-mathematics">Some Mathematics</h2>
+<p>…</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://sg-bradford.github.io/posts/Bifurcations.html</guid>
+  <pubDate>Mon, 25 May 2026 20:23:40 GMT</pubDate>
+</item>
+<item>
+  <title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</title>
   <link>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</link>
   <description><![CDATA[ 
 
@@ -20,32 +59,40 @@
 
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">(1) Introduction</h2>
+<section id="the-classical-gravity-water-wave-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-classical-gravity-water-wave-problem">The Classical Gravity Water Wave Problem</h2>
 <!-- more -->
-<p><strong>(1.1) A new non-local formulation of water waves in three dimensions</strong></p>
 <p>We start by defining the domain</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx_j%3C%5Cinfty,%5Cquad%20j=1,2,%5Cquad%20-h%3Cy%3C%5Ceta(x_1,%20x_2,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AD=%5C%7B-%5Cinfty%3Cx%3C%5Cinfty,%5Cquad%20-h%3Cy%3C%5Ceta(x,%20t),%5Cquad%20t%3E0%5C%7D%0A"></p>
 <p>The classical gravity water wave problem satisfies</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%5Cphi=0%5Cquad%5Ctext%7Bin%20%7DD,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=0%5Cquad%5Ctext%7Bon%20%7Dy=-h,%0A"> <span id="eq-gravity_wave_problem_3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Cphi_%7Bx_1%7D%5Ceta_%7Bx_1%7D+%5Cphi_%7Bx_2%7D%5Ceta_%7Bx_2%7D=%5Cphi_y%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta,%0A%5Ctag%7B1%7D"></span> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_t+%5Cfrac%7B1%7D%7B2%7D%7C%5Cnabla%5Cphi%7C%5E2+g%5Ceta=%5Cfrac%7B%5Csigma%7D%7B%5Crho%7D%5Cnabla%5Ccdot%5Cleft(%5Cfrac%7B%5Cnabla%5Ceta%7D%7B%5Csqrt%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D%7D%5Cright)%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta.%0A"></p>
-<p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <img src="https://latex.codecogs.com/png.latex?%5Ceta(x_1,%20x_2,%20t)"> and <img src="https://latex.codecogs.com/png.latex?q(x_1,%20x_2,%20t):=%5Cphi(x_1,%20x_2,%20%5Ceta(x_1,%20x_2,%20t),%20t)">.</p>
-<p>Since Equation&nbsp;1 is satisfied on the free surface, and</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_1%7D+%5Cphi_y%5Ceta_%7Bx_1%7D=q_%7Bx_1%7D,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_2%7D+%5Cphi_y%5Ceta_%7Bx_2%7D=q_%7Bx_2%7D,%0A"></p>
-<p>we can create the linear system</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A=%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20-%5Ceta_%7Bx_1%7D%5E2%20&amp;%20-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20%5C%5C%0A%20%20%20%20-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20&amp;%20-%5Ceta_%7Bx_2%7D%5E2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A+%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%20%5C%5C%0A%20%20%20%20q_%7Bx_2%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%0A%5Cend%7Bbmatrix%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%201+%5Ceta_%7Bx_1%7D%5E2%20&amp;%20%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20%5C%5C%0A%20%20%20%20%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7D%20&amp;%201+%5Ceta_%7Bx_2%7D%5E2%0A%5Cend%7Bbmatrix%7D%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20%5Cphi_%7Bx_1%7D%20%5C%5C%0A%20%20%20%20%5Cphi_%7Bx_2%7D%0A%5Cend%7Bbmatrix%7D%0A=%0A%5Cbegin%7Bbmatrix%7D%0A%20%20%20%20q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%20%5C%5C%0A%20%20%20%20q_%7Bx_2%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%0A%5Cend%7Bbmatrix%7D.%0A"></p>
-<p>The solution of which is</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_1%7D=%5Cfrac%7B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%7D%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_%7Bx_2%7D=%5Cfrac%7B(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%7D%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D,%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=%5Cfrac%7B%5Ceta_t+%5Ceta_%7Bx_1%7Dq_%7Bx_1%7D+%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D%7D%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D.%0A"></p>
-<p>At this point, the authors suggest that</p>
-<p><span id="eq-sqaure_grad_phi"><img src="https://latex.codecogs.com/png.latex?%0A%7C%5Cnabla%5Cphi%7C%5E2=%5Cfrac%7B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D%5E2+(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D%5E2+%5Ceta_t%5E2-2%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7Dq_%7Bx_2%7D%7D%7B1+%7C%5Cnabla%5Ceta%7C%5E2%7D.%0A%5Ctag%7B2%7D"></span></p>
-<p>Rather than deriving Equation&nbsp;2 from scratch, we can more easily verify its validity by showing that <img src="https://latex.codecogs.com/png.latex?%0A%5B1+%7C%5Cnabla%5Ceta%7C%5E2%5D%5Ccdot%5B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D%5E2+(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D%5E2+%5Ceta_t%5E2-2%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7Dq_%7Bx_2%7D%5D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5B(1+%5Ceta_%7Bx_2%7D%5E2)q_%7Bx_1%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_t%5D%5E2+%5B(1+%5Ceta_%7Bx_1%7D%5E2)q_%7Bx_2%7D-%5Ceta_%7Bx_1%7D%5Ceta_%7Bx_2%7Dq_%7Bx_1%7D-%5Ceta_%7Bx_2%7D%5Ceta_t%5D%5E2+%5B%5Ceta_t+%5Ceta_%7Bx_1%7Dq_%7Bx_1%7D+%5Ceta_%7Bx_2%7Dq_%7Bx_2%7D%5D%5E2,%0A"></p>
-<p>since <img src="https://latex.codecogs.com/png.latex?(1+%7C%5Cnabla%5Ceta%7C%5E2)"> must be a factor in the numerator of <img src="https://latex.codecogs.com/png.latex?%5Cphi_%7Bx_1%7D%5E2+%5Cphi_%7Bx_2%7D%5E2+%5Cphi_y%5E2"> for Equation&nbsp;2 to hold.</p>
+<p><span id="eq-Laplace"><img src="https://latex.codecogs.com/png.latex?%0A%5CDelta%5Cphi=0%5Cquad%5Ctext%7Bin%20%7DD,%0A%5Ctag%7B1%7D"></span> <img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y=0%5Cquad%5Ctext%7Bon%20%7Dy=-h,%0A"> <span id="eq-gravity_wave_problem_3"><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Cphi_x%5Ceta_x=%5Cphi_y%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta,%0A%5Ctag%7B2%7D"></span> <span id="eq-gravity_wave_problem_4"><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_t+%5Cfrac%7B1%7D%7B2%7D%7C%5Cnabla%5Cphi%7C%5E2+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%5Cquad%5Ctext%7Bon%20%7Dy=%5Ceta.%0A%5Ctag%7B3%7D"></span></p>
+</section>
+<section id="deriving-the-dynamic-boundary-condition" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
+<p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <img src="https://latex.codecogs.com/png.latex?%5Ceta(x,%20t)"> and <img src="https://latex.codecogs.com/png.latex?q(x,%20t):=%5Cphi(x_1,%20%5Ceta(x,%20t),%20t)">.</p>
+<p>Since Equation&nbsp;2 is satisfied on the free surface, and</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_x+%5Cphi_y%5Ceta_x=q_x,%0A"></p>
+<p>we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Bq_x-%5Cphi_y%5Ceta_x%5D%5Ceta_x=%5Cphi_y%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cphi_y=%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D,%5Cquad%5Cphi_x=%5Cfrac%7Bq_x-%5Ceta_x%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D.%0A"></p>
+<p>This implies that</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%7C%5Cnabla%5Cphi%7C%5E2=%5Cphi_x%5E2+%5Cphi_y%5E2%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2-2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_x%5E2%5Ceta_t%5E2%5D+%5B%5Ceta_x%5E2%20q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2+%5Ceta_t%5E2%5D+%5Ceta_x%5E2%5Bq_x%5E2+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%0A"></p>
+<p>Substituting <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C%5E2"> and <img src="https://latex.codecogs.com/png.latex?%5Cphi_t=q_t-%5Cphi_y%5Ceta_t"> into Equation&nbsp;3, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Bq_t-%5Cleft%5B%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D%5Ceta_t%5D+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5B%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B2%5Ceta_x%5Ceta_t%20q_x+2%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7B(1+%5Ceta_x%5E2)q_x%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B%5Ceta_x%5E2q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7Dq_x%5E2-%5Cfrac%7B(%5Ceta_t+%5Ceta_x%20q_x)%5E2%7D%7B1+%5Ceta_x%5E2%7D=0%0A"> This is the dynamic boundary condition - Bernoulli’s equation.</p>
+</section>
+<section id="deriving-the-global-relation" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-global-relation">Deriving the Global Relation</h2>
+<p>Suppose that <img src="https://latex.codecogs.com/png.latex?%5Cphi(x,y)"> and <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)"> are harmonic functions in <img src="https://latex.codecogs.com/png.latex?D"> - i.e.&nbsp;they satisfy Equation&nbsp;1. Then we have the identity</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y(%5Cpsi_%7Bxx%7D+%5Cpsi_%7Byy%7D)+%5Cpsi_y(%5Cphi_%7Bxx%7D+%5Cphi_%7Byy%7D)=0.%0A"></p>
+<p>Which can be rewritten as</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A(%5Cphi_y%5Cpsi_x+%5Cphi_x%5Cpsi_y)_x+(%5Cphi_y%5Cpsi_y-%5Cphi_x%5Cpsi_x)_y=0.%0A"></p>
+<p>[Thanks for reading! This article is still being written…]</p>
 
 
 </section>
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Fri, 22 May 2026 20:21:04 GMT</pubDate>
+  <pubDate>Mon, 25 May 2026 20:23:40 GMT</pubDate>
 </item>
 </channel>
 </rss>

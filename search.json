@@ -2,16 +2,37 @@
   {
     "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html",
     "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html",
-    "title": "[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves",
+    "title": "Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation",
     "section": "",
-    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain\n\\[\nD=\\{-\\infty&lt;x_j&lt;\\infty,\\quad j=1,2,\\quad -h&lt;y&lt;\\eta(x_1, x_2, t),\\quad t&gt;0\\}\n\\]\nThe classical gravity water wave problem satisfies\n\\[\n\\Delta\\phi=0\\quad\\text{in }D,\n\\] \\[\n\\phi_y=0\\quad\\text{on }y=-h,\n\\] \\[\n\\eta_t+\\phi_{x_1}\\eta_{x_1}+\\phi_{x_2}\\eta_{x_2}=\\phi_y\\quad\\text{on }y=\\eta,\n\\tag{1}\\] \\[\n\\phi_t+\\frac{1}{2}|\\nabla\\phi|^2+g\\eta=\\frac{\\sigma}{\\rho}\\nabla\\cdot\\left(\\frac{\\nabla\\eta}{\\sqrt{1+|\\nabla\\eta|^2}}\\right)\\quad\\text{on }y=\\eta.\n\\]\nWe aim to reformulate these equations purely in terms of functions on the free boundary. These functions are \\(\\eta(x_1, x_2, t)\\) and \\(q(x_1, x_2, t):=\\phi(x_1, x_2, \\eta(x_1, x_2, t), t)\\).\nSince Equation 1 is satisfied on the free surface, and\n\\[\n\\phi_{x_1}+\\phi_y\\eta_{x_1}=q_{x_1},\n\\] \\[\n\\phi_{x_2}+\\phi_y\\eta_{x_2}=q_{x_2},\n\\]\nwe can create the linear system\n\\[\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n    -\\eta_{x_1}^2 & -\\eta_{x_1}\\eta_{x_2} \\\\\n    -\\eta_{x_1}\\eta_{x_2} & -\\eta_{x_2}^2\n\\end{bmatrix}\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n    q_{x_1}-\\eta_{x_1}\\eta_t \\\\\n    q_{x_2}-\\eta_{x_2}\\eta_t\n\\end{bmatrix}\n\\] \\[\n\\implies\n\\begin{bmatrix}\n    1+\\eta_{x_1}^2 & \\eta_{x_1}\\eta_{x_2} \\\\\n    \\eta_{x_1}\\eta_{x_2} & 1+\\eta_{x_2}^2\n\\end{bmatrix}\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n    q_{x_1}-\\eta_{x_1}\\eta_t \\\\\n    q_{x_2}-\\eta_{x_2}\\eta_t\n\\end{bmatrix}.\n\\]\nThe solution of which is\n\\[\n\\phi_{x_1}=\\frac{(1+\\eta_{x_2}^2)q_{x_1}-\\eta_{x_1}\\eta_{x_2}q_{x_2}-\\eta_{x_1}\\eta_t}{1+|\\nabla\\eta|^2},\n\\] \\[\n\\phi_{x_2}=\\frac{(1+\\eta_{x_1}^2)q_{x_2}-\\eta_{x_1}\\eta_{x_2}q_{x_1}-\\eta_{x_2}\\eta_t}{1+|\\nabla\\eta|^2},\n\\] \\[\n\\phi_y=\\frac{\\eta_t+\\eta_{x_1}q_{x_1}+\\eta_{x_2}q_{x_2}}{1+|\\nabla\\eta|^2}.\n\\]\nAt this point, the authors suggest that\n\\[\n|\\nabla\\phi|^2=\\frac{(1+\\eta_{x_2}^2)q_{x_1}^2+(1+\\eta_{x_1}^2)q_{x_2}^2+\\eta_t^2-2\\eta_{x_1}\\eta_{x_2}q_{x_1}q_{x_2}}{1+|\\nabla\\eta|^2}.\n\\tag{2}\\]\nRather than deriving Equation 2 from scratch, we can more easily verify its validity by showing that \\[\n[1+|\\nabla\\eta|^2]\\cdot[(1+\\eta_{x_2}^2)q_{x_1}^2+(1+\\eta_{x_1}^2)q_{x_2}^2+\\eta_t^2-2\\eta_{x_1}\\eta_{x_2}q_{x_1}q_{x_2}]\n\\] \\[\n=[(1+\\eta_{x_2}^2)q_{x_1}-\\eta_{x_1}\\eta_{x_2}q_{x_2}-\\eta_{x_1}\\eta_t]^2+[(1+\\eta_{x_1}^2)q_{x_2}-\\eta_{x_1}\\eta_{x_2}q_{x_1}-\\eta_{x_2}\\eta_t]^2+[\\eta_t+\\eta_{x_1}q_{x_1}+\\eta_{x_2}q_{x_2}]^2,\n\\]\nsince \\((1+|\\nabla\\eta|^2)\\) must be a factor in the numerator of \\(\\phi_{x_1}^2+\\phi_{x_2}^2+\\phi_y^2\\) for Equation 2 to hold."
+    "text": "We start by defining the domain\n\\[\nD=\\{-\\infty&lt;x&lt;\\infty,\\quad -h&lt;y&lt;\\eta(x, t),\\quad t&gt;0\\}\n\\]\nThe classical gravity water wave problem satisfies\n\\[\n\\Delta\\phi=0\\quad\\text{in }D,\n\\tag{1}\\] \\[\n\\phi_y=0\\quad\\text{on }y=-h,\n\\] \\[\n\\eta_t+\\phi_x\\eta_x=\\phi_y\\quad\\text{on }y=\\eta,\n\\tag{2}\\] \\[\n\\phi_t+\\frac{1}{2}|\\nabla\\phi|^2+g\\eta=\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}\\quad\\text{on }y=\\eta.\n\\tag{3}\\]"
   },
   {
-    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
-    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#introduction",
-    "title": "[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves",
+    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#the-classical-gravity-water-wave-problem",
+    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#the-classical-gravity-water-wave-problem",
+    "title": "Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation",
     "section": "",
-    "text": "(1.1) A new non-local formulation of water waves in three dimensions\nWe start by defining the domain\n\\[\nD=\\{-\\infty&lt;x_j&lt;\\infty,\\quad j=1,2,\\quad -h&lt;y&lt;\\eta(x_1, x_2, t),\\quad t&gt;0\\}\n\\]\nThe classical gravity water wave problem satisfies\n\\[\n\\Delta\\phi=0\\quad\\text{in }D,\n\\] \\[\n\\phi_y=0\\quad\\text{on }y=-h,\n\\] \\[\n\\eta_t+\\phi_{x_1}\\eta_{x_1}+\\phi_{x_2}\\eta_{x_2}=\\phi_y\\quad\\text{on }y=\\eta,\n\\tag{1}\\] \\[\n\\phi_t+\\frac{1}{2}|\\nabla\\phi|^2+g\\eta=\\frac{\\sigma}{\\rho}\\nabla\\cdot\\left(\\frac{\\nabla\\eta}{\\sqrt{1+|\\nabla\\eta|^2}}\\right)\\quad\\text{on }y=\\eta.\n\\]\nWe aim to reformulate these equations purely in terms of functions on the free boundary. These functions are \\(\\eta(x_1, x_2, t)\\) and \\(q(x_1, x_2, t):=\\phi(x_1, x_2, \\eta(x_1, x_2, t), t)\\).\nSince Equation 1 is satisfied on the free surface, and\n\\[\n\\phi_{x_1}+\\phi_y\\eta_{x_1}=q_{x_1},\n\\] \\[\n\\phi_{x_2}+\\phi_y\\eta_{x_2}=q_{x_2},\n\\]\nwe can create the linear system\n\\[\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n    -\\eta_{x_1}^2 & -\\eta_{x_1}\\eta_{x_2} \\\\\n    -\\eta_{x_1}\\eta_{x_2} & -\\eta_{x_2}^2\n\\end{bmatrix}\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n+\n\\begin{bmatrix}\n    q_{x_1}-\\eta_{x_1}\\eta_t \\\\\n    q_{x_2}-\\eta_{x_2}\\eta_t\n\\end{bmatrix}\n\\] \\[\n\\implies\n\\begin{bmatrix}\n    1+\\eta_{x_1}^2 & \\eta_{x_1}\\eta_{x_2} \\\\\n    \\eta_{x_1}\\eta_{x_2} & 1+\\eta_{x_2}^2\n\\end{bmatrix}\n\\begin{bmatrix}\n    \\phi_{x_1} \\\\\n    \\phi_{x_2}\n\\end{bmatrix}\n=\n\\begin{bmatrix}\n    q_{x_1}-\\eta_{x_1}\\eta_t \\\\\n    q_{x_2}-\\eta_{x_2}\\eta_t\n\\end{bmatrix}.\n\\]\nThe solution of which is\n\\[\n\\phi_{x_1}=\\frac{(1+\\eta_{x_2}^2)q_{x_1}-\\eta_{x_1}\\eta_{x_2}q_{x_2}-\\eta_{x_1}\\eta_t}{1+|\\nabla\\eta|^2},\n\\] \\[\n\\phi_{x_2}=\\frac{(1+\\eta_{x_1}^2)q_{x_2}-\\eta_{x_1}\\eta_{x_2}q_{x_1}-\\eta_{x_2}\\eta_t}{1+|\\nabla\\eta|^2},\n\\] \\[\n\\phi_y=\\frac{\\eta_t+\\eta_{x_1}q_{x_1}+\\eta_{x_2}q_{x_2}}{1+|\\nabla\\eta|^2}.\n\\]\nAt this point, the authors suggest that\n\\[\n|\\nabla\\phi|^2=\\frac{(1+\\eta_{x_2}^2)q_{x_1}^2+(1+\\eta_{x_1}^2)q_{x_2}^2+\\eta_t^2-2\\eta_{x_1}\\eta_{x_2}q_{x_1}q_{x_2}}{1+|\\nabla\\eta|^2}.\n\\tag{2}\\]\nRather than deriving Equation 2 from scratch, we can more easily verify its validity by showing that \\[\n[1+|\\nabla\\eta|^2]\\cdot[(1+\\eta_{x_2}^2)q_{x_1}^2+(1+\\eta_{x_1}^2)q_{x_2}^2+\\eta_t^2-2\\eta_{x_1}\\eta_{x_2}q_{x_1}q_{x_2}]\n\\] \\[\n=[(1+\\eta_{x_2}^2)q_{x_1}-\\eta_{x_1}\\eta_{x_2}q_{x_2}-\\eta_{x_1}\\eta_t]^2+[(1+\\eta_{x_1}^2)q_{x_2}-\\eta_{x_1}\\eta_{x_2}q_{x_1}-\\eta_{x_2}\\eta_t]^2+[\\eta_t+\\eta_{x_1}q_{x_1}+\\eta_{x_2}q_{x_2}]^2,\n\\]\nsince \\((1+|\\nabla\\eta|^2)\\) must be a factor in the numerator of \\(\\phi_{x_1}^2+\\phi_{x_2}^2+\\phi_y^2\\) for Equation 2 to hold."
+    "text": "We start by defining the domain\n\\[\nD=\\{-\\infty&lt;x&lt;\\infty,\\quad -h&lt;y&lt;\\eta(x, t),\\quad t&gt;0\\}\n\\]\nThe classical gravity water wave problem satisfies\n\\[\n\\Delta\\phi=0\\quad\\text{in }D,\n\\tag{1}\\] \\[\n\\phi_y=0\\quad\\text{on }y=-h,\n\\] \\[\n\\eta_t+\\phi_x\\eta_x=\\phi_y\\quad\\text{on }y=\\eta,\n\\tag{2}\\] \\[\n\\phi_t+\\frac{1}{2}|\\nabla\\phi|^2+g\\eta=\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}\\quad\\text{on }y=\\eta.\n\\tag{3}\\]"
+  },
+  {
+    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#deriving-the-dynamic-boundary-condition",
+    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#deriving-the-dynamic-boundary-condition",
+    "title": "Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation",
+    "section": "Deriving the Dynamic Boundary Condition",
+    "text": "Deriving the Dynamic Boundary Condition\nWe aim to reformulate these equations purely in terms of functions on the free boundary. These functions are \\(\\eta(x, t)\\) and \\(q(x, t):=\\phi(x_1, \\eta(x, t), t)\\).\nSince Equation 2 is satisfied on the free surface, and\n\\[\n\\phi_x+\\phi_y\\eta_x=q_x,\n\\]\nwe have\n\\[\n\\eta_t+[q_x-\\phi_y\\eta_x]\\eta_x=\\phi_y\n\\] \\[\n\\implies\\phi_y=\\frac{\\eta_x q_x+\\eta_t}{1+\\eta_x^2},\\quad\\phi_x=\\frac{q_x-\\eta_x\\eta_t}{1+\\eta_x^2}.\n\\]\nThis implies that\n\\[\n|\\nabla\\phi|^2=\\phi_x^2+\\phi_y^2\n\\] \\[\n=\\frac{[q_x^2-2\\eta_x\\eta_t q_x+\\eta_x^2\\eta_t^2]+[\\eta_x^2 q_x^2+2\\eta_x\\eta_t q_x+\\eta_t^2]}{(1+\\eta_x^2)^2}\n\\] \\[\n=\\frac{[q_x^2+\\eta_t^2]+\\eta_x^2[q_x^2+\\eta_t^2]}{(1+\\eta_x^2)^2}\n\\] \\[\n=\\frac{q_x^2+\\eta_t^2}{1+\\eta_x^2}\n\\]\nSubstituting \\(|\\nabla\\phi|^2\\) and \\(\\phi_t=q_t-\\phi_y\\eta_t\\) into Equation 3, we have\n\\[\n[q_t-\\left[\\frac{\\eta_x q_x+\\eta_t}{1+\\eta_x^2}\\right]\\eta_t]+\\frac{1}{2}\\left[\\frac{q_x^2+\\eta_t^2}{1+\\eta_x^2}\\right]+g\\eta=\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}\n\\] \\[\n\\implies q_t+g\\eta-\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}+\\frac{1}{2}\\left(\\frac{q_x^2+\\eta_t^2}{1+\\eta_x^2}-\\frac{2\\eta_x\\eta_t q_x+2\\eta_t^2}{1+\\eta_x^2}\\right)=0\n\\] \\[\n\\implies q_t+g\\eta-\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}+\\frac{1}{2}\\left(\\frac{(1+\\eta_x^2)q_x^2}{1+\\eta_x^2}-\\frac{\\eta_x^2q_x^2+2\\eta_x\\eta_t q_x+\\eta_t^2}{1+\\eta_x^2}\\right)=0\n\\] \\[\n\\implies q_t+g\\eta-\\frac{\\sigma\\eta_{xx}}{\\rho(1+\\eta_x^2)^\\frac{3}{2}}+\\frac{1}{2}q_x^2-\\frac{(\\eta_t+\\eta_x q_x)^2}{1+\\eta_x^2}=0\n\\] This is the dynamic boundary condition - Bernoulli’s equation."
+  },
+  {
+    "objectID": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#deriving-the-global-relation",
+    "href": "posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#deriving-the-global-relation",
+    "title": "Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation",
+    "section": "Deriving the Global Relation",
+    "text": "Deriving the Global Relation\nSuppose that \\(\\phi(x,y)\\) and \\(\\psi(x,y)\\) are harmonic functions in \\(D\\) - i.e. they satisfy Equation 1. Then we have the identity\n\\[\n\\phi_y(\\psi_{xx}+\\psi_{yy})+\\psi_y(\\phi_{xx}+\\phi_{yy})=0.\n\\]\nWhich can be rewritten as\n\\[\n(\\phi_y\\psi_x+\\phi_x\\psi_y)_x+(\\phi_y\\psi_y-\\phi_x\\psi_x)_y=0.\n\\]\n[Thanks for reading! This article is still being written…]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Notes on Applied Mathematics",
+    "section": "",
+    "text": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night\n\n\nMay 24, 2026\n\n\n\n\n\n\n\n\n\n\nDerivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation\n\n\nAn expository derivation of a result shown by M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in “On a new non-local formulation of water waves”.\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -21,10 +42,38 @@
     "text": "Working notes from an MSc in Applied Mathematics - new topics as I encounter them."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Notes on Applied Mathematics",
+    "objectID": "posts/Bifurcations.html",
+    "href": "posts/Bifurcations.html",
+    "title": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night",
     "section": "",
-    "text": "[UNDER CONSTRUCTION] A Non-Local Formulation of Water Waves\n\n\nNotes on the mathematics of M. J. Ablowitz, A. S. Fokas, and Z. H. Musslimani in “On a new non-local formulation of water waves”.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Engineers don’t like unexpected behaviour in their systems. They really don’t like it when that unexpected behaviour"
+  },
+  {
+    "objectID": "posts/Bifurcations.html#background-and-context",
+    "href": "posts/Bifurcations.html#background-and-context",
+    "title": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night",
+    "section": "",
+    "text": "Engineers don’t like unexpected behaviour in their systems. They really don’t like it when that unexpected behaviour"
+  },
+  {
+    "objectID": "posts/Bifurcations.html#limit-cycles",
+    "href": "posts/Bifurcations.html#limit-cycles",
+    "title": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night",
+    "section": "Limit Cycles",
+    "text": "Limit Cycles\nDefinition\nA limit cycle is an isolated closed trajectory in phase space.\nBrief Description\nRecall that a closed trajectory in the phase space of a dynamical system represents a periodic solution. So a limit cycle describes a periodic solution that is isolated from all other periodic solutions - i.e. there are no other closed trajectories in a small neighbourhood around a limit cycle.\nLimit cycles only exist in nonlinear systems. If \\(\\pmb{x}(t)\\) is a periodic solution to a linear system \\(\\dot{\\pmb{x}}=A\\pmb{x}\\), then \\(c\\pmb{x}(t)\\) is also a solution for any constant \\(c\\in\\mathbb{R}\\). So for any linear system, either no closed trajectories exist, or an infinite family of closed trajectories exist.\nA limit cycle is said to be stable if all neighbouring trajectories converge to the limit cycle, and unstable if all neighbouring trajectories diverge from the limit cycle. Half-stable limit cycles exist as well, but are difficult to generalize to phase spaces of dimension \\(3\\) or higher. In the phase plane, a half-stable limit cycle can be understood as a limit cycle that is stable for trajectories on the interior of the limit cycle, and unstable for trajectories on the exterior (or vice versa)."
+  },
+  {
+    "objectID": "posts/Bifurcations.html#hopf-bifurcations",
+    "href": "posts/Bifurcations.html#hopf-bifurcations",
+    "title": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night",
+    "section": "Hopf Bifurcations",
+    "text": "Hopf Bifurcations\nDefinition\nA Hopf bifurcation is a"
+  },
+  {
+    "objectID": "posts/Bifurcations.html#some-mathematics",
+    "href": "posts/Bifurcations.html#some-mathematics",
+    "title": "Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night",
+    "section": "Some Mathematics",
+    "text": "Some Mathematics\n…"
   }
 ]
