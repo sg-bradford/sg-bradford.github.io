@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 25 May 2026 21:13:54 GMT</lastBuildDate>
+<lastBuildDate>Fri, 29 May 2026 18:13:14 GMT</lastBuildDate>
 <item>
   <title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</title>
   <link>https://sg-bradford.github.io/posts/Bifurcations.html</link>
@@ -48,7 +48,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/Bifurcations.html</guid>
-  <pubDate>Mon, 25 May 2026 21:13:54 GMT</pubDate>
+  <pubDate>Fri, 29 May 2026 18:13:14 GMT</pubDate>
 </item>
 <item>
   <title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</title>
@@ -71,31 +71,67 @@
 <h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
 <p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <img src="https://latex.codecogs.com/png.latex?%5Ceta(x,%20t)"> and <img src="https://latex.codecogs.com/png.latex?q(x,%20t):=%5Cphi(x_1,%20%5Ceta(x,%20t),%20t)">.</p>
 <p>Since Equation&nbsp;3 is satisfied on the free surface, and</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_x+%5Cphi_y%5Ceta_x=q_x,%0A"></p>
+<p><span id="eq-dqdx"><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_x+%5Cphi_y%5Ceta_x=q_x,%0A%5Ctag%7B5%7D"></span></p>
 <p>we have</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Ceta_t+%5Bq_x-%5Cphi_y%5Ceta_x%5D%5Ceta_x=%5Cphi_y%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cphi_y=%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D,%5Cquad%5Cphi_x=%5Cfrac%7Bq_x-%5Ceta_x%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D.%0A"></p>
 <p>This implies that</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%7C%5Cnabla%5Cphi%7C%5E2=%5Cphi_x%5E2+%5Cphi_y%5E2%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2-2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_x%5E2%5Ceta_t%5E2%5D+%5B%5Ceta_x%5E2%20q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7B%5Bq_x%5E2+%5Ceta_t%5E2%5D+%5Ceta_x%5E2%5Bq_x%5E2+%5Ceta_t%5E2%5D%7D%7B(1+%5Ceta_x%5E2)%5E2%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%0A"></p>
 <p>Substituting <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C%5E2"> and <img src="https://latex.codecogs.com/png.latex?%5Cphi_t=q_t-%5Cphi_y%5Ceta_t"> into Equation&nbsp;4, we have</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Bq_t-%5Cleft%5B%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D%5Ceta_t%5D+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5B%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B2%5Ceta_x%5Ceta_t%20q_x+2%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7B(1+%5Ceta_x%5E2)q_x%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B%5Ceta_x%5E2q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7Dq_x%5E2-%5Cfrac%7B(%5Ceta_t+%5Ceta_x%20q_x)%5E2%7D%7B1+%5Ceta_x%5E2%7D=0%0A"> This is the dynamic boundary condition - Bernoulli’s equation.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Bq_t-%5Cleft%5B%5Cfrac%7B%5Ceta_x%20q_x+%5Ceta_t%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D%5Ceta_t%5D+%5Cfrac%7B1%7D%7B2%7D%5Cleft%5B%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright%5D+g%5Ceta=%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7Bq_x%5E2+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B2%5Ceta_x%5Ceta_t%20q_x+2%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7D%5Cleft(%5Cfrac%7B(1+%5Ceta_x%5E2)q_x%5E2%7D%7B1+%5Ceta_x%5E2%7D-%5Cfrac%7B%5Ceta_x%5E2q_x%5E2+2%5Ceta_x%5Ceta_t%20q_x+%5Ceta_t%5E2%7D%7B1+%5Ceta_x%5E2%7D%5Cright)=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Ceta_x%5E2)%5E%5Cfrac%7B3%7D%7B2%7D%7D+%5Cfrac%7B1%7D%7B2%7Dq_x%5E2-%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7B(%5Ceta_t+%5Ceta_x%20q_x)%5E2%7D%7B1+%5Ceta_x%5E2%7D=0%0A"> This is the dynamic boundary condition - Bernoulli’s equation.</p>
 </section>
 <section id="deriving-the-global-relation" class="level2">
 <h2 class="anchored" data-anchor-id="deriving-the-global-relation">Deriving the Global Relation</h2>
 <p>Suppose that <img src="https://latex.codecogs.com/png.latex?%5Cphi(x,y)"> and <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)"> are harmonic functions in <img src="https://latex.codecogs.com/png.latex?D"> - i.e.&nbsp;they satisfy Equation&nbsp;1. Then we have the identity</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cphi_y(%5Cpsi_%7Bxx%7D+%5Cpsi_%7Byy%7D)+%5Cpsi_y(%5Cphi_%7Bxx%7D+%5Cphi_%7Byy%7D)=0.%0A"></p>
 <p>Which can be rewritten as</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A(%5Cphi_y%5Cpsi_x+%5Cphi_x%5Cpsi_y)_x+(%5Cphi_y%5Cpsi_y-%5Cphi_x%5Cpsi_x)_y=0.%0A"></p>
+<p><span id="eq-identity1"><img src="https://latex.codecogs.com/png.latex?%0A(%5Cphi_y%5Cpsi_x+%5Cphi_x%5Cpsi_y)_x+(%5Cphi_y%5Cpsi_y-%5Cphi_x%5Cpsi_x)_y=0.%0A%5Ctag%7B6%7D"></span></p>
 <p>Now let <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)=e%5E%7Bikx+ky%7D">. Since <img src="https://latex.codecogs.com/png.latex?%5Cpsi"> is harmonic, we can write</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5B%5Cpsi(ik%5Cphi_y+k%5Cphi_x)%5D_x+%5B%5Cpsi(k%5Cphi_x-ik%5Cphi_x)%5D_y=0%0A"></p>
 <p>In other words, the vector field <img src="https://latex.codecogs.com/png.latex?%5Cvec%7BF%7D(x,y)=%5Cpsi(ik%5Cphi_y+k%5Cphi_x)%5Chat%7Bi%7D+%5Cpsi(k%5Cphi_x-ik%5Cphi_x)%5Chat%7Bj%7D"> is non-divergent - i.e.&nbsp;<img src="https://latex.codecogs.com/png.latex?%5Cnabla%5Ccdot%20F=0">. Since <img src="https://latex.codecogs.com/png.latex?F"> is a continuously differentiable vector field,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_D%5B%5Cnabla%5Ccdot%20F%5DdV=%5Cint_%7B%5Cpartial%20D%7D%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%0A"></p>
-<p>by the divergence theorem. Thus,</p>
+<p>by the divergence theorem. Thus, we have the global relation</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B%5Cpartial%20D%7D%5Be%5E%7Bikx+ky%7D%5B(ik%5Cphi_y+k%5Cphi_x)%5Chat%7Bi%7D+(k%5Cphi_y-ik%5Cphi_x)%5Chat%7Bj%7D%5D%5Ccdot%5Chat%7Bn%7D%5DdS=0%0A"></p>
-<p>Here, we make the assumption that <img src="https://latex.codecogs.com/png.latex?%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C"> vanish as <img src="https://latex.codecogs.com/png.latex?%7Cx%7C%5Cto%5Cinfty"> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). Thus we have</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Clim_%7B%7Cx%7C%5Cto%5Cinfty%7D%5Cleft(%5Cint_%7B%5Cpartial%20D%7D%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%5Cright)=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty(%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=-h%7D+%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=%5Ceta%7D)dx=0%0A"></p>
-<p>Since we have Equation&nbsp;2 for <img src="https://latex.codecogs.com/png.latex?y=-h">, the bottom integrand becomes</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0Ae%5E%7Bikx-kh%7D(ik%5Cphi_x)%0A"></p>
-<p>On the free surface</p>
+<p>Here, we make the assumption that <img src="https://latex.codecogs.com/png.latex?%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?%7C%5Cnabla%5Cphi%7C"> vanish as <img src="https://latex.codecogs.com/png.latex?%7Cx%7C%5Cto%5Cinfty"> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). From this assumption, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B%5Cpartial%20D%7D%5BF%5Ccdot%5Chat%7Bn%7D%5DdS=%5Cleft%5B%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%5Cright%5D_%7By=-h%7D+%5Cleft%5B%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%5BF%5Ccdot%5Chat%7Bn%7D%5DdS%5Cright%5D_%7By=%5Ceta%7D=0%0A"></p>
+<p>Since Equation&nbsp;2 holds for <img src="https://latex.codecogs.com/png.latex?y=-h">, the bottom integral becomes</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=-h%7D=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx-kh%7D(ik%5Cphi_x)(x,-h,t)dx%0A"></p>
+<p>Since Equation&nbsp;3 and Equation&nbsp;5 hold for <img src="https://latex.codecogs.com/png.latex?y=%5Ceta">, the top integral becomes</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=%5Ceta%7D=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5B-(ik%5Cphi_y+k%5Cphi_x)%5Ceta_x+(k%5Cphi_y-ik%5Cphi_x)%5Ddx%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5Bk(%5Cphi_y-%5Ceta_x%5Cphi_x)-ik(%5Cphi_x+%5Ceta_x%5Cphi_y)%5Ddx%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5Bk%5Ceta_t-ikq_x%5Ddx.%0A"></p>
+<p>Thus, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk%5Ceta%7D(k%5Ceta_t-ikq_x)+e%5E%7B-kh%7D(ik%5Cphi_x)(x,-h,t)%5Ddx=0.%0A"></p>
+<p>Factoring out <img src="https://latex.codecogs.com/png.latex?k"> yeilds</p>
+<p><span id="eq-global1"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk%5Ceta%7D(%5Ceta_t-iq_x)+e%5E%7B-kh%7D(i%5Cphi_x)(x,-h,t)%5Ddx=0.%0A%5Ctag%7B7%7D"></span></p>
+<p>This global relation is not yet all that useful to us, since the term <img src="https://latex.codecogs.com/png.latex?e%5E%7Bikx-kh%7D(i%5Cphi_x)"> is evaluated at the bottom <img src="https://latex.codecogs.com/png.latex?y=-h">. Towards the aim of removing this term, we can repeat the process above by substituting the harmonic function <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)=e%5E%7Bikx-ky%7D"> into Equation&nbsp;6 to derive a similar global relation</p>
+<p><span id="eq-global2"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7B-k%5Ceta%7D(%5Ceta_t+iq_x)-e%5E%7Bkh%7D(i%5Cphi_x)(x,-h,t)%5Ddx=0.%0A%5Ctag%7B8%7D"></span></p>
+<p>Multiplying Equation&nbsp;7 by <img src="https://latex.codecogs.com/png.latex?e%5E%7Bkh%7D">, Equation&nbsp;8 by <img src="https://latex.codecogs.com/png.latex?e%5E%7B-kh%7D">, and adding the two, we get</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk(%5Ceta+h)%7D(%5Ceta_t-iq_x)+e%5E%7B-k(%5Ceta+h)%7D(n_t+iq_x)%5Ddx=0.%0A"></p>
+<p>Or, multiplying by <img src="https://latex.codecogs.com/png.latex?i">,</p>
+<p><span id="eq-global"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk(%5Ceta+h)%7D(i%5Ceta_t+q_x)+e%5E%7B-k(%5Ceta+h)%7D(in_t-q_x)%5Ddx=0.%0A%5Ctag%7B9%7D"></span></p>
+<p>Interestingly, since <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)=%5C%7Be%5E%7B%5Cpm%20ikx%5Cpm%20ky%7D,e%5E%7B%5Cpm%20ikx%5Cmp%20ky%7D%5C%7D"> are all harmonic functions, Equation&nbsp;9 is still valid if we set <img src="https://latex.codecogs.com/png.latex?k%5Cto-k"></p>
+<p><span id="eq-global-k"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7D%5Be%5E%7B-k(%5Ceta+h)%7D(i%5Ceta_t+q_x)+e%5E%7Bk(%5Ceta+h)%7D(in_t-q_x)%5Ddx=0.%0A%5Ctag%7B10%7D"></span></p>
+</section>
+<section id="deriving-the-nonlinear-schrödinger-equation-from-the-deep-water-limit" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-nonlinear-schrödinger-equation-from-the-deep-water-limit">Deriving the Nonlinear Schrödinger Equation From the Deep Water Limit</h2>
+<p>As we take <img src="https://latex.codecogs.com/png.latex?h%5Cto%5Cinfty"> in Equation&nbsp;10, supposing <img src="https://latex.codecogs.com/png.latex?k%3E0">, we get</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7Bk%5Ceta%7De%5E%7Bkh%7D(in_t-q_x)dx=0%0A"> <span id="eq-pos_k"><img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7Bk%5Ceta%7D(in_t-q_x)dx=0.%0A%5Ctag%7B11%7D"></span></p>
+<p>Supposing <img src="https://latex.codecogs.com/png.latex?k%3C0">, we get</p>
+<p><span id="eq-neg_k"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B-k%5Ceta%7D(i%5Ceta_t+q_x)dx=0%0A%5Ctag%7B12%7D"></span></p>
+<p>Equation&nbsp;11 and Equation&nbsp;12 can be written as the single equation</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%7Ck%7C%5Ceta%7D(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0.%0A"></p>
+<p>We can replace <img src="https://latex.codecogs.com/png.latex?%5Ceta%5Cto%5Cvarepsilon%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?q%5Cto%5Cvarepsilon%20q"> for <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon%5Cll1"> to create a small wave approximation.</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%5Cvarepsilon%7Ck%7C%5Ceta%7D(i%5Cvarepsilon%5Ceta_t-%5Ctext%7Bsgn%7D(k)%5Cvarepsilon%20q_x)dx=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%5Cvarepsilon%7Ck%7C%5Ceta%7D(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0,%0A"></p>
+<p>and</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvarepsilon%20q_t+%5Cvarepsilon%20g%5Ceta-%5Cfrac%7B%5Csigma%5Cvarepsilon%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%5E2%7D%7B2%7Dq_x%5E2-%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7B(%5Cvarepsilon%5Ceta_t+%5Cvarepsilon%5E2%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%7D%7B2%7Dq_x%5E2-%5Cfrac%7B%5Cvarepsilon%7D%7B2%7D%5Cfrac%7B(%5Ceta_t+%5Cvarepsilon%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"></p>
+<p>Expanding up to <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D(%5Cvarepsilon%5E2)">, we have</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7D(1+%5Cvarepsilon%7Ck%7C%5Ceta+%5Cfrac%7B1%7D%7B2%7D%5Cvarepsilon%5E2%7Ck%7C%5E2%5Ceta%5E2+%5Cdots)(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0,%0A"></p>
+<p>and using the generalized Binomial theorem</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A(a+x)%5En%7C_%7B%7Cx/a%7C%3C1%7D=%5Csum_%7Bk=0%7D%5E%5Cinfty%5Cfrac%7B%5CGamma(n+1)%7D%7B%5CGamma(k+1)%5CGamma(n-k+1)%7Da%5E%7Bn-k%7Dx%5Ek,%0A"></p>
+<p>we get</p>
+<p><span id="eq-bernoulli-expanded"><img src="https://latex.codecogs.com/png.latex?%0Aq_t+g%5Ceta-%5Cfrac%7B%5Csigma%7D%7B%5Crho%7D(1-%5Cfrac%7B3%7D%7B2%7D%5Cvarepsilon%5E2%5Ceta_x%5E2)%5Ceta_%7Bxx%7D+%5Cfrac%7B%5Cvarepsilon%7D%7B2%7Dq_x%5E2-%5Cfrac%7B%5Cvarepsilon%7D%7B2%7D(%5Ceta_t%5E2+2%5Cvarepsilon%5Ceta_t%5Ceta_x%20q_x)+%5Cdots=0.%0A%5Ctag%7B13%7D"></span></p>
+<p>Differentiating Equation&nbsp;13 with respect to <img src="https://latex.codecogs.com/png.latex?x">, and denoting <img src="https://latex.codecogs.com/png.latex?Q:=q_x"> yields</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7D(1+%5Cvarepsilon%7Ck%7C%5Ceta+%5Cfrac%7B1%7D%7B2%7D%5Cvarepsilon%5E2%7Ck%7C%5E2%5Ceta%5E2+%5Cdots)(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)Q)dx=0,%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AQ_t+g%5Ceta_x-%5Cfrac%7B%5Csigma%7D%7B%5Crho%7D%5B%5Ceta_%7Bxx%7D-%5Cfrac%7B3%7D%7B2%7D%5Cvarepsilon%5E2%5Ceta_x%5E2%5Ceta_%7Bxx%7D%5D_x+%5Cvarepsilon%20QQ_x-%5Cfrac%7B%5Cvarepsilon%7D%7B2%7D%5B%5Ceta_t%5E2+2%5Cvarepsilon%5Ceta_t%5Ceta_x%20Q%5D_x+%5Cdots=0.%0A"></p>
+<p>At this point, we make a <em>quasi-monochromatic</em> wave expansion of <img src="https://latex.codecogs.com/png.latex?%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?Q">.</p>
 <p>[Thanks for reading! This article is still being written…]</p>
 
 
@@ -103,7 +139,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Mon, 25 May 2026 21:13:54 GMT</pubDate>
+  <pubDate>Fri, 29 May 2026 18:13:14 GMT</pubDate>
 </item>
 </channel>
 </rss>

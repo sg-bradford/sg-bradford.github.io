@@ -206,9 +206,9 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 <h2 class="anchored" data-anchor-id="deriving-the-dynamic-boundary-condition">Deriving the Dynamic Boundary Condition</h2>
 <p>We aim to reformulate these equations purely in terms of functions on the free boundary. These functions are <span class="math inline">\(\eta(x, t)\)</span> and <span class="math inline">\(q(x, t):=\phi(x_1, \eta(x, t), t)\)</span>.</p>
 <p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;3</a> is satisfied on the free surface, and</p>
-<p><span class="math display">\[
+<p><span id="eq-dqdx"><span class="math display">\[
 \phi_x+\phi_y\eta_x=q_x,
-\]</span></p>
+\tag{5}\]</span></span></p>
 <p>we have</p>
 <p><span class="math display">\[
 \eta_t+[q_x-\phi_y\eta_x]\eta_x=\phi_y
@@ -233,7 +233,7 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 \]</span> <span class="math display">\[
 \implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}\left(\frac{(1+\eta_x^2)q_x^2}{1+\eta_x^2}-\frac{\eta_x^2q_x^2+2\eta_x\eta_t q_x+\eta_t^2}{1+\eta_x^2}\right)=0
 \]</span> <span class="math display">\[
-\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}q_x^2-\frac{(\eta_t+\eta_x q_x)^2}{1+\eta_x^2}=0
+\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\eta_x^2)^\frac{3}{2}}+\frac{1}{2}q_x^2-\frac{1}{2}\frac{(\eta_t+\eta_x q_x)^2}{1+\eta_x^2}=0
 \]</span> This is the dynamic boundary condition - Bernoulli’s equation.</p>
 </section>
 <section id="deriving-the-global-relation" class="level2">
@@ -243,9 +243,9 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 \phi_y(\psi_{xx}+\psi_{yy})+\psi_y(\phi_{xx}+\phi_{yy})=0.
 \]</span></p>
 <p>Which can be rewritten as</p>
-<p><span class="math display">\[
+<p><span id="eq-identity1"><span class="math display">\[
 (\phi_y\psi_x+\phi_x\psi_y)_x+(\phi_y\psi_y-\phi_x\psi_x)_y=0.
-\]</span></p>
+\tag{6}\]</span></span></p>
 <p>Now let <span class="math inline">\(\psi(x,y)=e^{ikx+ky}\)</span>. Since <span class="math inline">\(\psi\)</span> is harmonic, we can write</p>
 <p><span class="math display">\[
 [\psi(ik\phi_y+k\phi_x)]_x+[\psi(k\phi_x-ik\phi_x)]_y=0
@@ -254,19 +254,99 @@ D=\{-\infty&lt;x&lt;\infty,\quad -h&lt;y&lt;\eta(x, t),\quad t&gt;0\}
 <p><span class="math display">\[
 \int_D[\nabla\cdot F]dV=\int_{\partial D}[F\cdot\hat{n}]dS
 \]</span></p>
-<p>by the divergence theorem. Thus,</p>
+<p>by the divergence theorem. Thus, we have the global relation</p>
 <p><span class="math display">\[
 \int_{\partial D}[e^{ikx+ky}[(ik\phi_y+k\phi_x)\hat{i}+(k\phi_y-ik\phi_x)\hat{j}]\cdot\hat{n}]dS=0
 \]</span></p>
-<p>Here, we make the assumption that <span class="math inline">\(\eta\)</span> and <span class="math inline">\(|\nabla\phi|\)</span> vanish as <span class="math inline">\(|x|\to\infty\)</span> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). Thus we have</p>
+<p>Here, we make the assumption that <span class="math inline">\(\eta\)</span> and <span class="math inline">\(|\nabla\phi|\)</span> vanish as <span class="math inline">\(|x|\to\infty\)</span> (the physical interpretation of this assumption is that waters are calm very far away from the waves we are observing). From this assumption, we have</p>
 <p><span class="math display">\[
-\lim_{|x|\to\infty}\left(\int_{\partial D}[F\cdot\hat{n}]dS\right)=\int_{-\infty}^\infty([F\cdot\hat{n}]_{y=-h}+[F\cdot\hat{n}]_{y=\eta})dx=0
+\int_{\partial D}[F\cdot\hat{n}]dS=\left[\int_{-\infty}^\infty[F\cdot\hat{n}]dS\right]_{y=-h}+\left[\int_{-\infty}^\infty[F\cdot\hat{n}]dS\right]_{y=\eta}=0
 \]</span></p>
-<p>Since we have <a href="#eq-bottom" class="quarto-xref">Equation&nbsp;2</a> for <span class="math inline">\(y=-h\)</span>, the bottom integrand becomes</p>
+<p>Since <a href="#eq-bottom" class="quarto-xref">Equation&nbsp;2</a> holds for <span class="math inline">\(y=-h\)</span>, the bottom integral becomes</p>
 <p><span class="math display">\[
-e^{ikx-kh}(ik\phi_x)
+\int_{-\infty}^\infty[F\cdot\hat{n}]_{y=-h}=\int_{-\infty}^\infty e^{ikx-kh}(ik\phi_x)(x,-h,t)dx
 \]</span></p>
-<p>On the free surface</p>
+<p>Since <a href="#eq-gravity_wave_problem_3" class="quarto-xref">Equation&nbsp;3</a> and <a href="#eq-dqdx" class="quarto-xref">Equation&nbsp;5</a> hold for <span class="math inline">\(y=\eta\)</span>, the top integral becomes</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty[F\cdot\hat{n}]_{y=\eta}=\int_{-\infty}^\infty e^{ikx+k\eta}[-(ik\phi_y+k\phi_x)\eta_x+(k\phi_y-ik\phi_x)]dx
+\]</span> <span class="math display">\[
+=\int_{-\infty}^\infty e^{ikx+k\eta}[k(\phi_y-\eta_x\phi_x)-ik(\phi_x+\eta_x\phi_y)]dx
+\]</span> <span class="math display">\[
+=\int_{-\infty}^\infty e^{ikx+k\eta}[k\eta_t-ikq_x]dx.
+\]</span></p>
+<p>Thus, we have</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{ikx}[e^{k\eta}(k\eta_t-ikq_x)+e^{-kh}(ik\phi_x)(x,-h,t)]dx=0.
+\]</span></p>
+<p>Factoring out <span class="math inline">\(k\)</span> yeilds</p>
+<p><span id="eq-global1"><span class="math display">\[
+\int_{-\infty}^\infty e^{ikx}[e^{k\eta}(\eta_t-iq_x)+e^{-kh}(i\phi_x)(x,-h,t)]dx=0.
+\tag{7}\]</span></span></p>
+<p>This global relation is not yet all that useful to us, since the term <span class="math inline">\(e^{ikx-kh}(i\phi_x)\)</span> is evaluated at the bottom <span class="math inline">\(y=-h\)</span>. Towards the aim of removing this term, we can repeat the process above by substituting the harmonic function <span class="math inline">\(\psi(x,y)=e^{ikx-ky}\)</span> into <a href="#eq-identity1" class="quarto-xref">Equation&nbsp;6</a> to derive a similar global relation</p>
+<p><span id="eq-global2"><span class="math display">\[
+\int_{-\infty}^\infty e^{ikx}[e^{-k\eta}(\eta_t+iq_x)-e^{kh}(i\phi_x)(x,-h,t)]dx=0.
+\tag{8}\]</span></span></p>
+<p>Multiplying <a href="#eq-global1" class="quarto-xref">Equation&nbsp;7</a> by <span class="math inline">\(e^{kh}\)</span>, <a href="#eq-global2" class="quarto-xref">Equation&nbsp;8</a> by <span class="math inline">\(e^{-kh}\)</span>, and adding the two, we get</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{ikx}[e^{k(\eta+h)}(\eta_t-iq_x)+e^{-k(\eta+h)}(n_t+iq_x)]dx=0.
+\]</span></p>
+<p>Or, multiplying by <span class="math inline">\(i\)</span>,</p>
+<p><span id="eq-global"><span class="math display">\[
+\int_{-\infty}^\infty e^{ikx}[e^{k(\eta+h)}(i\eta_t+q_x)+e^{-k(\eta+h)}(in_t-q_x)]dx=0.
+\tag{9}\]</span></span></p>
+<p>Interestingly, since <span class="math inline">\(\psi(x,y)=\{e^{\pm ikx\pm ky},e^{\pm ikx\mp ky}\}\)</span> are all harmonic functions, <a href="#eq-global" class="quarto-xref">Equation&nbsp;9</a> is still valid if we set <span class="math inline">\(k\to-k\)</span></p>
+<p><span id="eq-global-k"><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}[e^{-k(\eta+h)}(i\eta_t+q_x)+e^{k(\eta+h)}(in_t-q_x)]dx=0.
+\tag{10}\]</span></span></p>
+</section>
+<section id="deriving-the-nonlinear-schrödinger-equation-from-the-deep-water-limit" class="level2">
+<h2 class="anchored" data-anchor-id="deriving-the-nonlinear-schrödinger-equation-from-the-deep-water-limit">Deriving the Nonlinear Schrödinger Equation From the Deep Water Limit</h2>
+<p>As we take <span class="math inline">\(h\to\infty\)</span> in <a href="#eq-global-k" class="quarto-xref">Equation&nbsp;10</a>, supposing <span class="math inline">\(k&gt;0\)</span>, we get</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}e^{k\eta}e^{kh}(in_t-q_x)dx=0
+\]</span> <span id="eq-pos_k"><span class="math display">\[
+\implies\int_{-\infty}^\infty e^{-ikx}e^{k\eta}(in_t-q_x)dx=0.
+\tag{11}\]</span></span></p>
+<p>Supposing <span class="math inline">\(k&lt;0\)</span>, we get</p>
+<p><span id="eq-neg_k"><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}e^{-k\eta}(i\eta_t+q_x)dx=0
+\tag{12}\]</span></span></p>
+<p><a href="#eq-pos_k" class="quarto-xref">Equation&nbsp;11</a> and <a href="#eq-neg_k" class="quarto-xref">Equation&nbsp;12</a> can be written as the single equation</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}e^{|k|\eta}(i\eta_t-\text{sgn}(k)q_x)dx=0.
+\]</span></p>
+<p>We can replace <span class="math inline">\(\eta\to\varepsilon\eta\)</span> and <span class="math inline">\(q\to\varepsilon q\)</span> for <span class="math inline">\(\varepsilon\ll1\)</span> to create a small wave approximation.</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}e^{\varepsilon|k|\eta}(i\varepsilon\eta_t-\text{sgn}(k)\varepsilon q_x)dx=0
+\]</span> <span class="math display">\[
+\implies\int_{-\infty}^\infty e^{-ikx}e^{\varepsilon|k|\eta}(i\eta_t-\text{sgn}(k)q_x)dx=0,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\varepsilon q_t+\varepsilon g\eta-\frac{\sigma\varepsilon\eta_{xx}}{\rho(1+\varepsilon^2\eta_x^2)^{\frac{3}{2}}}+\frac{\varepsilon^2}{2}q_x^2-\frac{1}{2}\frac{(\varepsilon\eta_t+\varepsilon^2\eta_x q_x)^2}{1+\varepsilon^2\eta_x^2}=0
+\]</span> <span class="math display">\[
+\implies q_t+g\eta-\frac{\sigma\eta_{xx}}{\rho(1+\varepsilon^2\eta_x^2)^{\frac{3}{2}}}+\frac{\varepsilon}{2}q_x^2-\frac{\varepsilon}{2}\frac{(\eta_t+\varepsilon\eta_x q_x)^2}{1+\varepsilon^2\eta_x^2}=0
+\]</span></p>
+<p>Expanding up to <span class="math inline">\(\mathcal{O}(\varepsilon^2)\)</span>, we have</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}(1+\varepsilon|k|\eta+\frac{1}{2}\varepsilon^2|k|^2\eta^2+\dots)(i\eta_t-\text{sgn}(k)q_x)dx=0,
+\]</span></p>
+<p>and using the generalized Binomial theorem</p>
+<p><span class="math display">\[
+(a+x)^n|_{|x/a|&lt;1}=\sum_{k=0}^\infty\frac{\Gamma(n+1)}{\Gamma(k+1)\Gamma(n-k+1)}a^{n-k}x^k,
+\]</span></p>
+<p>we get</p>
+<p><span id="eq-bernoulli-expanded"><span class="math display">\[
+q_t+g\eta-\frac{\sigma}{\rho}(1-\frac{3}{2}\varepsilon^2\eta_x^2)\eta_{xx}+\frac{\varepsilon}{2}q_x^2-\frac{\varepsilon}{2}(\eta_t^2+2\varepsilon\eta_t\eta_x q_x)+\dots=0.
+\tag{13}\]</span></span></p>
+<p>Differentiating <a href="#eq-bernoulli-expanded" class="quarto-xref">Equation&nbsp;13</a> with respect to <span class="math inline">\(x\)</span>, and denoting <span class="math inline">\(Q:=q_x\)</span> yields</p>
+<p><span class="math display">\[
+\int_{-\infty}^\infty e^{-ikx}(1+\varepsilon|k|\eta+\frac{1}{2}\varepsilon^2|k|^2\eta^2+\dots)(i\eta_t-\text{sgn}(k)Q)dx=0,
+\]</span></p>
+<p><span class="math display">\[
+Q_t+g\eta_x-\frac{\sigma}{\rho}[\eta_{xx}-\frac{3}{2}\varepsilon^2\eta_x^2\eta_{xx}]_x+\varepsilon QQ_x-\frac{\varepsilon}{2}[\eta_t^2+2\varepsilon\eta_t\eta_x Q]_x+\dots=0.
+\]</span></p>
+<p>At this point, we make a <em>quasi-monochromatic</em> wave expansion of <span class="math inline">\(\eta\)</span> and <span class="math inline">\(Q\)</span>.</p>
 <p>[Thanks for reading! This article is still being written…]</p>
 
 
