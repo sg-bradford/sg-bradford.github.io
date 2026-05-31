@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 29 May 2026 18:13:14 GMT</lastBuildDate>
+<lastBuildDate>Sun, 31 May 2026 03:31:43 GMT</lastBuildDate>
 <item>
   <title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</title>
   <link>https://sg-bradford.github.io/posts/Bifurcations.html</link>
@@ -48,7 +48,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/Bifurcations.html</guid>
-  <pubDate>Fri, 29 May 2026 18:13:14 GMT</pubDate>
+  <pubDate>Sun, 31 May 2026 03:31:43 GMT</pubDate>
 </item>
 <item>
   <title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</title>
@@ -99,7 +99,7 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%5BF%5Ccdot%5Chat%7Bn%7D%5D_%7By=%5Ceta%7D=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5B-(ik%5Cphi_y+k%5Cphi_x)%5Ceta_x+(k%5Cphi_y-ik%5Cphi_x)%5Ddx%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5Bk(%5Cphi_y-%5Ceta_x%5Cphi_x)-ik(%5Cphi_x+%5Ceta_x%5Cphi_y)%5Ddx%0A"> <img src="https://latex.codecogs.com/png.latex?%0A=%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx+k%5Ceta%7D%5Bk%5Ceta_t-ikq_x%5Ddx.%0A"></p>
 <p>Thus, we have</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk%5Ceta%7D(k%5Ceta_t-ikq_x)+e%5E%7B-kh%7D(ik%5Cphi_x)(x,-h,t)%5Ddx=0.%0A"></p>
-<p>Factoring out <img src="https://latex.codecogs.com/png.latex?k"> yeilds</p>
+<p>Factoring out <img src="https://latex.codecogs.com/png.latex?k"> yields</p>
 <p><span id="eq-global1"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7Bk%5Ceta%7D(%5Ceta_t-iq_x)+e%5E%7B-kh%7D(i%5Cphi_x)(x,-h,t)%5Ddx=0.%0A%5Ctag%7B7%7D"></span></p>
 <p>This global relation is not yet all that useful to us, since the term <img src="https://latex.codecogs.com/png.latex?e%5E%7Bikx-kh%7D(i%5Cphi_x)"> is evaluated at the bottom <img src="https://latex.codecogs.com/png.latex?y=-h">. Towards the aim of removing this term, we can repeat the process above by substituting the harmonic function <img src="https://latex.codecogs.com/png.latex?%5Cpsi(x,y)=e%5E%7Bikx-ky%7D"> into Equation&nbsp;6 to derive a similar global relation</p>
 <p><span id="eq-global2"><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7Bikx%7D%5Be%5E%7B-k%5Ceta%7D(%5Ceta_t+iq_x)-e%5E%7Bkh%7D(i%5Cphi_x)(x,-h,t)%5Ddx=0.%0A%5Ctag%7B8%7D"></span></p>
@@ -139,7 +139,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Fri, 29 May 2026 18:13:14 GMT</pubDate>
+  <pubDate>Sun, 31 May 2026 03:31:43 GMT</pubDate>
 </item>
 </channel>
 </rss>
