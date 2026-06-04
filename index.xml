@@ -10,7 +10,7 @@
 <atom:link href="https://sg-bradford.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>Working notes from an MSc in Applied Mathematics - new topics as I encounter them.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Sun, 31 May 2026 03:31:43 GMT</lastBuildDate>
+<lastBuildDate>Thu, 04 Jun 2026 20:40:21 GMT</lastBuildDate>
 <item>
   <title>Subcritical Hopf Bifurcations, and Other Horrors Lurking in the Night</title>
   <link>https://sg-bradford.github.io/posts/Bifurcations.html</link>
@@ -48,7 +48,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/Bifurcations.html</guid>
-  <pubDate>Sun, 31 May 2026 03:31:43 GMT</pubDate>
+  <pubDate>Thu, 04 Jun 2026 20:40:21 GMT</pubDate>
 </item>
 <item>
   <title>Derivation of the Nonlinear Schrödinger Equation for Small Amplitude Deep Water Waves from a Non-Local Formulation</title>
@@ -120,8 +120,7 @@
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%7Ck%7C%5Ceta%7D(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0.%0A"></p>
 <p>We can replace <img src="https://latex.codecogs.com/png.latex?%5Ceta%5Cto%5Cvarepsilon%5Ceta"> and <img src="https://latex.codecogs.com/png.latex?q%5Cto%5Cvarepsilon%20q"> for <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon%5Cll1"> to create a small wave approximation.</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%5Cvarepsilon%7Ck%7C%5Ceta%7D(i%5Cvarepsilon%5Ceta_t-%5Ctext%7Bsgn%7D(k)%5Cvarepsilon%20q_x)dx=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7De%5E%7B%5Cvarepsilon%7Ck%7C%5Ceta%7D(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0,%0A"></p>
-<p>and</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cvarepsilon%20q_t+%5Cvarepsilon%20g%5Ceta-%5Cfrac%7B%5Csigma%5Cvarepsilon%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%5E2%7D%7B2%7Dq_x%5E2-%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7B(%5Cvarepsilon%5Ceta_t+%5Cvarepsilon%5E2%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%7D%7B2%7Dq_x%5E2-%5Cfrac%7B%5Cvarepsilon%7D%7B2%7D%5Cfrac%7B(%5Ceta_t+%5Cvarepsilon%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"></p>
+<p>and <a href="https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html#eq-gravity_wave_problem_3">label</a> <img src="https://latex.codecogs.com/png.latex?%0A%5Cvarepsilon%20q_t+%5Cvarepsilon%20g%5Ceta-%5Cfrac%7B%5Csigma%5Cvarepsilon%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%5E2%7D%7B2%7Dq_x%5E2-%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7B(%5Cvarepsilon%5Ceta_t+%5Cvarepsilon%5E2%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"> <img src="https://latex.codecogs.com/png.latex?%0A%5Cimplies%20q_t+g%5Ceta-%5Cfrac%7B%5Csigma%5Ceta_%7Bxx%7D%7D%7B%5Crho(1+%5Cvarepsilon%5E2%5Ceta_x%5E2)%5E%7B%5Cfrac%7B3%7D%7B2%7D%7D%7D+%5Cfrac%7B%5Cvarepsilon%7D%7B2%7Dq_x%5E2-%5Cfrac%7B%5Cvarepsilon%7D%7B2%7D%5Cfrac%7B(%5Ceta_t+%5Cvarepsilon%5Ceta_x%20q_x)%5E2%7D%7B1+%5Cvarepsilon%5E2%5Ceta_x%5E2%7D=0%0A"></p>
 <p>Expanding up to <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BO%7D(%5Cvarepsilon%5E2)">, we have</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Cint_%7B-%5Cinfty%7D%5E%5Cinfty%20e%5E%7B-ikx%7D(1+%5Cvarepsilon%7Ck%7C%5Ceta+%5Cfrac%7B1%7D%7B2%7D%5Cvarepsilon%5E2%7Ck%7C%5E2%5Ceta%5E2+%5Cdots)(i%5Ceta_t-%5Ctext%7Bsgn%7D(k)q_x)dx=0,%0A"></p>
 <p>and using the generalized Binomial theorem</p>
@@ -139,7 +138,7 @@
 
  ]]></description>
   <guid>https://sg-bradford.github.io/posts/On_a_new_non_Local_Formulation_of_Water_Waves.html</guid>
-  <pubDate>Sun, 31 May 2026 03:31:43 GMT</pubDate>
+  <pubDate>Thu, 04 Jun 2026 20:40:21 GMT</pubDate>
 </item>
 </channel>
 </rss>
